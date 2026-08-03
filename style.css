@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700;800&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
   --bg-primary: #ffffff;
@@ -17,7 +17,7 @@
   --text-secondary: #4a505c;
   --text-muted: #8a92a0;
   
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
   --font-mono: 'Space Mono', monospace;
   --font-body: 'Inter', sans-serif;
   
@@ -59,7 +59,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em; /* Tight editorial letter spacing */
   text-transform: uppercase;
   color: var(--text-primary);
 }
@@ -1386,6 +1386,18 @@ footer {
   .price-card:nth-child(4) {
     border-bottom: none !important;
   }
+
+  /* Timeline -> 1 column stack on tablets to avoid text compression */
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+  .timeline-step {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-color) !important;
+  }
+  .timeline-step:last-child {
+    border-bottom: none !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1456,17 +1468,7 @@ footer {
     border-bottom: none !important;
   }
 
-  /* Timeline -> 1 column */
-  .timeline {
-    grid-template-columns: 1fr;
-  }
-  .timeline-step {
-    border-right: none !important;
-    border-bottom: 1px solid var(--border-color) !important;
-  }
-  .timeline-step:last-child {
-    border-bottom: none !important;
-  }
+
 
   /* Logo grid -> 2 columns */
   .logo-grid {
