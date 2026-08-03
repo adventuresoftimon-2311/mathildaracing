@@ -269,6 +269,7 @@ nav ul li a {
   color: var(--text-secondary);
   border-radius: 6px;
   border: 1px solid transparent;
+  white-space: nowrap;
 }
 
 nav ul li a:hover, nav ul li a.active {
@@ -1384,6 +1385,16 @@ footer {
   }
   100% {
     transform: scale(1.15);
+  }
+}
+
+@media (max-width: 1150px) {
+  nav ul {
+    gap: 4px;
+  }
+  nav ul li a {
+    padding: 6px 10px;
+    font-size: 0.8rem;
   }
 }
 
