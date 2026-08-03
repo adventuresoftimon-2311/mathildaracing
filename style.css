@@ -25,6 +25,11 @@
   --max-width: 1300px;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -1340,6 +1345,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
   .header-container {
     height: 70px;
   }
@@ -1379,6 +1387,25 @@ footer {
   .mobile-nav-toggle {
     display: flex;
   }
+  
+  /* Mobile Typography & Layout */
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.0;
+    word-break: break-word;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+  }
+  
   .trust-grid,
   .pricing-grid,
   .driver-stats-grid,
@@ -1413,12 +1440,12 @@ footer {
   .parent-info-grid,
   .form-row {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 24px;
   }
   .contact-form-section {
     padding: 30px 20px;
   }
   .carousel-track {
-    height: 350px;
+    height: 300px;
   }
 }
