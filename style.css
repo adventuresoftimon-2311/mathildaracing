@@ -286,7 +286,8 @@ main {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center top; /* Align to top to prevent heads from being cut off */
+  background-position: center 38%; /* Vertically centers the drivers' faces/helmets */
+  transform-origin: center 38%;    /* Zooms in/out directly from the faces to prevent cropping during animation */
   opacity: 0;
   transition: opacity 1.5s ease-in-out; /* Smooth cross-fade transition */
   filter: brightness(0.32) contrast(1.05); /* Darkened for strong contrast */
@@ -558,7 +559,7 @@ main {
 .teaser-image {
   height: 500px;
   background-size: cover;
-  background-position: center;
+  background-position: center top; /* Align to top to prevent cropping heads or cars */
   border-right: 1px solid var(--border-color);
 }
 
@@ -782,6 +783,7 @@ main {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  object-position: center top; /* Prevent Mathilda's head from being cut off in portrait photo */
   border-right: 1px solid var(--border-color);
 }
 
