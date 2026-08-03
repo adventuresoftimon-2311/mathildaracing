@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const file = e.target.files[0];
           uploadText.innerHTML = `<span style="color: var(--accent); font-weight: 600;">✓ Datei bereit:</span> ${file.name} (${(file.size / (1024 * 1024)).toFixed(2)} MB)`;
           uploadBox.style.borderColor = "var(--accent)";
-          uploadBox.style.background = "rgba(255, 102, 0, 0.03)";
+          uploadBox.style.background = "rgba(234, 91, 12, 0.03)";
         }
       };
       dummyInput.click();

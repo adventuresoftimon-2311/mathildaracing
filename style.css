@@ -7,11 +7,11 @@
   --bg-card: rgba(20, 22, 28, 0.65);
   --bg-card-hover: rgba(30, 33, 42, 0.85);
   --border-color: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 102, 0, 0.4);
+  --border-hover: rgba(234, 91, 12, 0.4);
   
-  --accent: #ff6600; /* Neon motorsport lime green */
-  --accent-hover: #ff8533;
-  --accent-rgb: 255, 102, 0;
+  --accent: #ea5b0c; /* Neon motorsport lime green */
+  --accent-hover: #ff7324;
+  --accent-rgb: 234, 91, 12;
   
   --accent-secondary: #ff3c00; /* High-speed racing red */
   --accent-secondary-rgb: 255, 60, 0;
@@ -24,8 +24,8 @@
   --font-body: 'Inter', sans-serif;
   
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --shadow-glow: 0 0 25px rgba(255, 102, 0, 0.15);
-  --shadow-glow-strong: 0 0 35px rgba(255, 102, 0, 0.35);
+  --shadow-glow: 0 0 25px rgba(234, 91, 12, 0.15);
+  --shadow-glow-strong: 0 0 35px rgba(234, 91, 12, 0.35);
   --border-radius: 12px;
   
   --max-width: 1200px;
@@ -61,7 +61,7 @@ body {
   overflow-x: hidden;
   position: relative;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(255, 102, 0, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 10% 20%, rgba(234, 91, 12, 0.03) 0%, transparent 50%),
     radial-gradient(circle at 90% 80%, rgba(255, 60, 0, 0.02) 0%, transparent 50%),
     linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
@@ -136,8 +136,8 @@ img {
 .badge {
   display: inline-block;
   padding: 6px 12px;
-  background: rgba(255, 102, 0, 0.1);
-  border: 1px solid rgba(255, 102, 0, 0.25);
+  background: rgba(234, 91, 12, 0.1);
+  border: 1px solid rgba(234, 91, 12, 0.25);
   color: var(--accent);
   border-radius: 50px;
   font-size: 0.8rem;
@@ -279,7 +279,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 nav ul li a.active {
-  border-color: rgba(255, 102, 0, 0.2);
+  border-color: rgba(234, 91, 12, 0.2);
   color: var(--accent);
 }
 
@@ -438,7 +438,7 @@ main {
 .card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 102, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(234, 91, 12, 0.05);
   transform: translateY(-5px);
 }
 
@@ -461,8 +461,8 @@ main {
 .card-icon {
   width: 60px;
   height: 60px;
-  background: rgba(255, 102, 0, 0.05);
-  border: 1px solid rgba(255, 102, 0, 0.15);
+  background: rgba(234, 91, 12, 0.05);
+  border: 1px solid rgba(234, 91, 12, 0.15);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -609,7 +609,7 @@ main {
   text-align: center;
   padding: 100px 0;
   position: relative;
-  background: linear-gradient(180deg, transparent, rgba(255, 102, 0, 0.02) 50%, transparent);
+  background: linear-gradient(180deg, transparent, rgba(234, 91, 12, 0.02) 50%, transparent);
 }
 
 .cta-block h2 {
@@ -654,7 +654,7 @@ main {
 
 .phase-number {
   font-size: 3rem;
-  color: rgba(255, 102, 0, 0.2);
+  color: rgba(234, 91, 12, 0.2);
   line-height: 1;
 }
 
@@ -704,7 +704,7 @@ main {
   right: -50px;
   width: 150px;
   height: 150px;
-  background: rgba(255, 102, 0, 0.03);
+  background: rgba(234, 91, 12, 0.03);
   border-radius: 50%;
   filter: blur(40px);
 }
@@ -768,7 +768,7 @@ main {
 
 .price-card.featured {
   background: var(--bg-card);
-  border-color: rgba(255, 102, 0, 0.3);
+  border-color: rgba(234, 91, 12, 0.3);
   position: relative;
 }
 
@@ -1066,7 +1066,7 @@ main {
 }
 
 .logo-item:hover {
-  border-color: rgba(255, 102, 0, 0.3);
+  border-color: rgba(234, 91, 12, 0.3);
   background: var(--bg-card);
 }
 
@@ -1169,7 +1169,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 10px rgba(255, 102, 0, 0.1);
+  box-shadow: 0 0 10px rgba(234, 91, 12, 0.1);
 }
 
 .file-upload-wrapper {
@@ -1184,7 +1184,7 @@ textarea:focus {
 
 .file-upload-wrapper:hover {
   border-color: var(--accent);
-  background: rgba(255, 102, 0, 0.01);
+  background: rgba(234, 91, 12, 0.01);
 }
 
 .file-upload-wrapper i {
@@ -1202,8 +1202,8 @@ textarea:focus {
 }
 
 .form-feedback.success {
-  background: rgba(255, 102, 0, 0.1);
-  border: 1px solid rgba(255, 102, 0, 0.3);
+  background: rgba(234, 91, 12, 0.1);
+  border: 1px solid rgba(234, 91, 12, 0.3);
   color: #fff;
   display: block;
 }
@@ -1265,7 +1265,7 @@ textarea:focus {
 }
 
 .faq-item.active {
-  border-color: rgba(255, 102, 0, 0.2);
+  border-color: rgba(234, 91, 12, 0.2);
 }
 
 .faq-item.active .faq-answer {
