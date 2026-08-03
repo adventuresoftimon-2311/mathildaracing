@@ -286,7 +286,7 @@ main {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: center top; /* Align to top to prevent heads from being cut off */
   opacity: 0;
   transition: opacity 1.5s ease-in-out; /* Smooth cross-fade transition */
   filter: brightness(0.32) contrast(1.05); /* Darkened for strong contrast */
