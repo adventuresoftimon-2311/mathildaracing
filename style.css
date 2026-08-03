@@ -246,6 +246,10 @@ main {
   padding: 100px 0;
 }
 
+#home.page-section {
+  padding: 0;
+}
+
 .page-section.active {
   display: block;
   opacity: 1;
