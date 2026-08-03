@@ -276,6 +276,7 @@ main {
   height: 100%;
   z-index: 1;
   overflow: hidden;
+  background-color: #0c0d10; /* Dark background prevents white-flashing during transitions */
 }
 
 .hero-slide {
@@ -290,11 +291,11 @@ main {
   transition: opacity 1.5s ease-in-out; /* Smooth cross-fade transition */
   filter: brightness(0.32) contrast(1.05); /* Darkened for strong contrast */
   transform: scale(1.02);
+  animation: slowZoom 20s infinite alternate ease-in-out; /* Continuous zoom prevents snapping on class toggle */
 }
 
 .hero-slide.active {
   opacity: 1;
-  animation: slowZoom 15s infinite alternate;
 }
 
 .hero-gradient-overlay {
