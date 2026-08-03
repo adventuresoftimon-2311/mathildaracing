@@ -557,7 +557,8 @@ main {
 }
 
 .teaser-image {
-  height: 500px;
+  height: 100%;
+  min-height: 500px;
   background-size: cover;
   background-position: center top; /* Align to top to prevent cropping heads or cars */
   border-right: 1px solid var(--border-color);
@@ -779,9 +780,14 @@ main {
   margin-bottom: 60px;
 }
 
+.case-study-media {
+  display: flex;
+}
+
 .case-study-media img {
   width: 100%;
-  height: 500px;
+  height: 100%;
+  min-height: 500px;
   object-fit: cover;
   object-position: center top; /* Prevent Mathilda's head from being cut off in portrait photo */
   border-right: 1px solid var(--border-color);
@@ -945,7 +951,8 @@ main {
 }
 
 .pitch-image {
-  height: 500px;
+  height: 100%;
+  min-height: 500px;
   background-size: cover;
   background-position: center;
 }
