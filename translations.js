@@ -222,7 +222,7 @@ const translations = {
     ".faq-list .faq-item:nth-child(4) .faq-answer-inner": "Wir stellen professionelle Sponsoring-Exposés zur Verfügung, integrieren Fahrer in unsere bestehenden Partnernetzwerke und bieten B2B-Konzepte für Sponsoren an.",
 
     // Footer
-    "footer .footer-col:nth-child(1) p": "Mathilda Racing ist Ihre Plattform für den professionellen Einstieg in den Formelsport.",
+    "footer .footer-col:nth-child(1) p": "Mathilda Racing begleitet ambitionierte Talente auf ihrem Weg in den professionellen Formelsport.",
     "footer .footer-col:nth-child(2) h4": "Navigation",
     "footer .footer-col:nth-child(3) h4": "Rechtliches",
     "footer .footer-col:nth-child(3) .footer-links li:nth-child(1) a": "Impressum",
@@ -455,7 +455,7 @@ const translations = {
     ".faq-list .faq-item:nth-child(4) .faq-answer-inner": "We provide professional sponsorship portfolios, integrate drivers into our existing partner networks, and offer B2B concepts for sponsors.",
 
     // Footer
-    "footer .footer-col:nth-child(1) p": "Mathilda Racing is your platform for a professional entry into formula racing.",
+    "footer .footer-col:nth-child(1) p": "Mathilda Racing accompanies ambitious talents on their path into professional formula racing.",
     "footer .footer-col:nth-child(2) h4": "Navigation",
     "footer .footer-col:nth-child(3) h4": "Legal",
     "footer .footer-col:nth-child(3) .footer-links li:nth-child(1) a": "Legal Notice",
