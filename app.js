@@ -272,4 +272,19 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // --- HERO SLIDESHOW LOGIC ---
+  const heroSlides = document.querySelectorAll(".hero-slide");
+  if (heroSlides.length > 0) {
+    let currentHeroIndex = 0;
+    
+    function nextHeroSlide() {
+      heroSlides[currentHeroIndex].classList.remove("active");
+      currentHeroIndex = (currentHeroIndex + 1) % heroSlides.length;
+      heroSlides[currentHeroIndex].classList.add("active");
+    }
+    
+    // Rotate slide every 5 seconds
+    setInterval(nextHeroSlide, 5000);
+  }
 });

@@ -264,18 +264,33 @@ main {
   overflow: hidden;
 }
 
-.hero-background {
+.hero-slideshow {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Smooth cross-fade transition */
   filter: brightness(0.32) contrast(1.05); /* Darkened for strong contrast */
   transform: scale(1.02);
-  animation: slowZoom 30s infinite alternate;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  animation: slowZoom 15s infinite alternate;
 }
 
 .hero-gradient-overlay {
@@ -331,14 +346,26 @@ main {
   gap: 20px;
 }
 
+.hero-ctas .btn-primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.hero-ctas .btn-primary:hover {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
 .hero-ctas .btn-secondary {
   color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 
 .hero-ctas .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: #ffffff !important;
+  color: #000000 !important;
   border-color: #ffffff !important;
 }
 
