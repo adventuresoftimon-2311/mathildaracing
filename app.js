@@ -246,4 +246,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1500);
     });
   }
+
+  // --- MOBILE MENU TOGGLE ---
+  const mobileToggle = document.getElementById("mobile-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  if (mobileToggle && mainNav) {
+    mobileToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("open");
+      const icon = mobileToggle.querySelector("i");
+      if (mainNav.classList.contains("open")) {
+        icon.className = "fas fa-xmark";
+      } else {
+        icon.className = "fas fa-bars";
+      }
+    });
+
+    // Close mobile nav when clicking a link
+    const mobileLinks = mainNav.querySelectorAll("ul li a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        const icon = mobileToggle.querySelector("i");
+        icon.className = "fas fa-bars";
+      });
+    });
+  }
 });
