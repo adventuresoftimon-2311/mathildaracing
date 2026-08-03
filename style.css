@@ -741,6 +741,14 @@ main {
   margin-bottom: 8px;
 }
 
+.price-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  min-height: 65px; /* Ensures all descriptions take up the same vertical space for perfect grid alignment */
+  margin-bottom: 20px;
+}
+
 .price-tag {
   font-family: var(--font-mono);
   font-size: 1.25rem;
@@ -1559,6 +1567,10 @@ footer {
   .price-card {
     border-right: none !important;
     border-bottom: 1px solid var(--border-color) !important;
+  }
+  .price-card p {
+    min-height: auto;
+    margin-bottom: 15px;
   }
   .price-card:last-child {
     border-bottom: none !important;
