@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathilda Racing | Professioneller Einstieg & Talentförderung in der Formel 4</title>
+  <meta name="description" content="Professionelle Talentförderung & Fahrerplätze in der Formel 4 für ambitionierte Nachwuchsfahrer. 15 Jahre Motorsporterfahrung, individuelles Coaching & B2B Sponsoring.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./downloaded_images/cropped-favicon-512x456-1-32x32.png">
+  <!-- FontAwesome Icons via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <div class="container header-container">
+      <a href="#home" class="logo-wrapper btn-navigate">
+        <img src="./downloaded_images/mathildaLogo-min-300x141-1.png" alt="Mathilda Racing Logo" id="site-logo">
+        <div class="logo-text">MATHILDA<span>RACING</span></div>
+      </a>
+      
+      <button class="mobile-nav-toggle" aria-label="Navigation umschalten" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#home" class="active">Startseite</a></li>
+          <li><a href="#program">Talentförderung</a></li>
+          <li><a href="#driver">Fahrer & Case Study</a></li>
+          <li><a href="#partner">Partner werden</a></li>
+          <li><a href="#apply">Bewerbung</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT SECTIONS (SPA Tabs) -->
+  <main>
+
+    <!-- ================= SECTION: HOME ================= -->
+    <section id="home" class="page-section active">
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-background" style="background-image: url('./downloaded_images/Paatz_Barcelona_header_1000px.jpg');"></div>
+        <div class="hero-gradient-overlay"></div>
+        <div class="container">
+          <div class="hero-content-wrapper">
+            <span class="badge">Formel 4 & Nachwuchsförderung</span>
+            <h1 class="text-gradient">Dein professioneller Einstieg in die Formel 4</h1>
+            <p class="sub-headline">Fahrerplätze, individuelles Coaching und ganzheitliche Talentförderung für ambitionierte Nachwuchsfahrerinnen und Nachwuchsfahrer.</p>
+            <div class="hero-ctas">
+              <a href="#program" class="btn btn-primary btn-navigate">Fahrerprogramm kennenlernen <i class="fas fa-arrow-right"></i></a>
+              <a href="#apply" class="btn btn-secondary btn-navigate" id="cta-first-talk">Erstgespräch vereinbaren</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRUST BANNER -->
+      <div class="trust-banner">
+        <div class="container">
+          <div class="trust-grid">
+            <div class="trust-item" id="trust-experience">
+              <div class="trust-number">15+</div>
+              <div class="trust-text">Jahre Motorsport-Erfahrung</div>
+            </div>
+            <div class="trust-item" id="trust-wins">
+              <div class="trust-number">🏆</div>
+              <div class="trust-text">Mehrfache Klassensiege Nürburgring</div>
+            </div>
+            <div class="trust-item" id="trust-series">
+              <div class="trust-number">F4</div>
+              <div class="trust-text">Erfahrung F4, FWS & F1 Academy</div>
+            </div>
+            <div class="trust-item" id="trust-coaching">
+              <div class="trust-number">360°</div>
+              <div class="trust-text">Ganzheitliche Fahrerentwicklung</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OFFERING SECTION -->
+      <div class="offering-section">
+        <div class="container">
+          <h2 class="section-title">Mehr als ein Fahrerplatz</h2>
+          <p class="section-subtitle">Wir verbinden professionellen Renneinsatz mit modernster Leistungsdiagnostik, Mentaltraining und professionellem Coaching.</p>
+          
+          <div class="grid-cards">
+            <!-- Card 1: Young Drivers -->
+            <div class="card" id="card-drivers">
+              <div class="card-icon"><i class="fas fa-helmet-safety"></i></div>
+              <h3>Für Nachwuchsfahrer</h3>
+              <p>Für junge Talente, die den Schritt aus dem Kartsport in den professionellen Formelsport gehen wollen.</p>
+              <ul class="card-list">
+                <li>Formel-4 Cockpits & Testtage</li>
+                <li>Erfahrene Renningenieure</li>
+                <li>Fahrdaten- und Videoanalysen</li>
+                <li>Karrierebegleitung (F1 Academy etc.)</li>
+              </ul>
+              <a href="#program" class="btn btn-secondary btn-navigate" style="width: 100%;">Details ansehen</a>
+            </div>
+
+            <!-- Card 2: Parents -->
+            <div class="card" id="card-parents">
+              <div class="card-icon"><i class="fas fa-users-cog"></i></div>
+              <h3>Für Eltern & Förderer</h3>
+              <p>Sicherheit, Transparenz und eine seriöse Karriereplanung haben für uns oberste Priorität.</p>
+              <ul class="card-list">
+                <li>Vollständige Betreuung & Logistik</li>
+                <li>Schulische Vereinbarkeit</li>
+                <li>Transparente Budgetstruktur</li>
+                <li>Professionelle Physis-Diagnostik</li>
+              </ul>
+              <a href="#program" class="btn btn-secondary btn-navigate" style="width: 100%;">Informationen für Eltern</a>
+            </div>
+
+            <!-- Card 3: Sponsors -->
+            <div class="card" id="card-sponsors">
+              <div class="card-icon"><i class="fas fa-handshake"></i></div>
+              <h3>Für Sponsoren & Partner</h3>
+              <p>Nutzen Sie die emotionale Plattform Motorsport für Ihre Marke und Ihr Businessnetzwerk.</p>
+              <ul class="card-list">
+                <li>Branding auf F4-Fahrzeugen</li>
+                <li>Reichweitenstarke Kampagnen</li>
+                <li>Exklusive Hospitality-Events</li>
+                <li>B2B-Partnernetzwerk</li>
+              </ul>
+              <a href="#partner" class="btn btn-secondary btn-navigate" style="width: 100%;">Partner werden</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROADMAP TIMELINE -->
+      <div class="process-section">
+        <div class="container">
+          <h2 class="section-title">Dein Weg in die Formel 4</h2>
+          <p class="section-subtitle">Ein klar strukturierter Ablauf vom ersten Kennenlernen bis zum Renneinsatz.</p>
+          
+          <div class="timeline">
+            <div class="timeline-step">
+              <div class="timeline-number">1</div>
+              <h4>Bewerbung</h4>
+              <p>Fahrerprofil unverbindlich online einreichen.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-number">2</div>
+              <h4>Potenzialprüfung</h4>
+              <p>Erstgespräch, Karrierecheck und Leistungsdiagnostik.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-number">3</div>
+              <h4>Sichtungs- / Testtag</h4>
+              <p>Erste Testfahrten auf der Rennstrecke mit Datenanalyse.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-number">4</div>
+              <h4>Entwicklungsplan</h4>
+              <p>Maßgeschneidertes Trainings- und Sponsoringangebot.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-number">5</div>
+              <h4>Vorbereitung & Start</h4>
+              <p>Technisches Training, Simulatorarbeit und Renneinsatz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE STUDY TEASER -->
+      <div class="case-study-teaser">
+        <div class="container">
+          <div class="teaser-box">
+            <div class="teaser-image" style="background-image: url('./downloaded_images/paatz2026astonmartinweiss-768x512.jpg');"></div>
+            <div class="teaser-content">
+              <span class="badge">Erfolgsgeschichte</span>
+              <h3>Vom Nachwuchstalent in den internationalen Formelsport</h3>
+              <p>Mathilda Paatz zeigt, wie ausdauernde Talentförderung und professionelles Coaching den Übergang vom Kartsport in renommierte Formelserien und Rennakademien (wie die Aston Martin Academy und Formel-Nachwuchsprogramme) ebnen.</p>
+              <a href="#driver" class="btn btn-primary btn-navigate">Vollständige Case Study lesen <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA BLOCK -->
+      <div class="cta-block">
+        <div class="container">
+          <h2>Bereit für den nächsten Schritt?</h2>
+          <p>Reiche jetzt dein unverbindliches Fahrerprofil ein. Wir prüfen deine Erfahrung, deine Ziele und deine Entwicklungsmöglichkeiten persönlich und diskret.</p>
+          <a href="#apply" class="btn btn-primary btn-navigate" style="font-size:1.1rem; padding: 16px 36px;">Fahrerprofil einreichen <i class="fas fa-paper-plane"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= SECTION: PROGRAM (TALENTFÖRDERUNG) ================= -->
+    <section id="program" class="page-section">
+      <div class="container program-intro">
+        <span class="badge">Das Ausbildungskonzept</span>
+        <h2 class="section-title">Ganzheitliche Talentförderung</h2>
+        <p class="section-subtitle">Wir vergeben unsere Fahrerplätze gezielt an Talente, bei denen wir sportliches Potenzial, professionelle Einstellung und eine langfristige Entwicklungsperspektive erkennen.</p>
+
+        <!-- THE 3 PHASES -->
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-header">
+              <h3>1. Potenzialanalyse</h3>
+              <div class="phase-number">01</div>
+            </div>
+            <ul class="phase-list">
+              <li>Fahrerische Standortbestimmung</li>
+              <li>Mentale und körperliche Leistungsdiagnostik</li>
+              <li>Analyse der bisherigen Rennerfahrung (Kart/Formel)</li>
+              <li>Definition realistischer Entwicklungsziele</li>
+            </ul>
+          </div>
+          
+          <div class="phase-card">
+            <div class="phase-header">
+              <h3>2. Entwicklungsplan</h3>
+              <div class="phase-number">02</div>
+            </div>
+            <ul class="phase-list">
+              <li>Fahrtraining und intensive Daten- & Videoanalyse</li>
+              <li>Fitness- und Reaktionstraining</li>
+              <li>Mentales Training & Stressbewältigung</li>
+              <li>Ernährungsberatung & Regeneration</li>
+              <li>Medien- und Sponsorenkompetenz</li>
+            </ul>
+          </div>
+          
+          <div class="phase-card">
+            <div class="phase-header">
+              <h3>3. Renneinsatz-Vorbereitung</h3>
+              <div class="phase-number">03</div>
+            </div>
+            <ul class="phase-list">
+              <li>Technisches Verständnis & Zusammenarbeit mit Ingenieuren</li>
+              <li>Ausgiebige Testtage auf nationalen/internationalen Strecken</li>
+              <li>Rennwochenenden-Simulationen</li>
+              <li>Teilnahme an Formel-4-Programmen (F4 CEZ, FWS)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ELTERN INFO CENTER -->
+        <div class="parent-info-box">
+          <div class="parent-info-content">
+            <h3><i class="fas fa-shield-halved text-accent"></i> Wichtig für Eltern & Förderer</h3>
+            <p>Ein Einstieg in den Formelsport ist eine gemeinsame Entscheidung der Familie. Wir begleiten Sie mit voller Transparenz.</p>
+            
+            <div class="parent-info-grid">
+              <div class="parent-item">
+                <h4>Sicherheit & Fahrzeuge</h4>
+                <p>Unsere Formel-4-Fahrzeuge entsprechen den neuesten FIA-Sicherheitsstandards (Halo-System, Crashtests). Die Strecken und Testtage unterliegen strengen Sicherheitsauflagen.</p>
+              </div>
+              <div class="parent-item">
+                <h4>Schulische Vereinbarkeit</h4>
+                <p>Sportlicher Erfolg darf die schulische Laufbahn nicht gefährden. Wir planen Testtage, Simulator- und Fitnesstraining flexibel und in Abstimmung mit dem Stundenplan.</p>
+              </div>
+              <div class="parent-item">
+                <h4>Rundum-Betreuung</h4>
+                <p>Wir organisieren die Logistik, Transfers, sportgerechte Verpflegung sowie die Unterkunft an den Rennstrecken, damit sich der Fahrer voll fokussieren kann.</p>
+              </div>
+              <div class="parent-item">
+                <h4>Erwartungen & Karriere</h4>
+                <p>Wir versprechen keine unrealistischen Formel-1-Träume, sondern erarbeiten ehrliche Meilensteine und bereiten Fahrer auf den harten Profialltag vor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ENTRY PATHWAYS & PRICING -->
+        <div class="pathway-section">
+          <h3 class="section-title">Verfügbare Programme</h3>
+          <p class="section-subtitle">Um den Einstieg so flexibel wie möglich zu gestalten, bieten wir verschiedene Buchungsoptionen.</p>
+          
+          <div class="pricing-grid">
+            <div class="price-card featured">
+              <h3>Sichtungs- / Testtag</h3>
+              <p>Der ideale Einstieg, um das Auto und unser Team kennenzulernen.</p>
+              <div class="price-tag">Einzeltag</div>
+              <ul class="price-features">
+                <li>Technische Einweisung</li>
+                <li>Fahrzeit auf der Rennstrecke</li>
+                <li>Datenanalyse mit Ingenieur</li>
+                <li>Standortbestimmung</li>
+              </ul>
+              <a href="#apply" class="btn btn-primary btn-navigate" style="width: 100%;">Jetzt bewerben</a>
+            </div>
+
+            <div class="price-card">
+              <h3>Entwicklungspaket</h3>
+              <p>Gezieltes Training zur Vorbereitung auf den Formelsport.</p>
+              <div class="price-tag">Paketpreis</div>
+              <ul class="price-features">
+                <li>Mehrere Testtage</li>
+                <li>Simulator-Training</li>
+                <li>Physisches Coaching</li>
+                <li>Datenschulung</li>
+              </ul>
+              <a href="#apply" class="btn btn-secondary btn-navigate" style="width: 100%;">Anfragen</a>
+            </div>
+
+            <div class="price-card">
+              <h3>Rennwochenende</h3>
+              <p>Gaststarts oder gezielte Einsätze in Meisterschaftsläufen.</p>
+              <div class="price-tag">Auf Anfrage</div>
+              <ul class="price-features">
+                <li>Teilnahme an F4-Rennen</li>
+                <li>Voller technischer Support</li>
+                <li>Mechaniker & Ingenieur</li>
+                <li>Reifen, Sprit & Nenngebühr</li>
+              </ul>
+              <a href="#apply" class="btn btn-secondary btn-navigate" style="width: 100%;">Anfragen</a>
+            </div>
+
+            <div class="price-card">
+              <h3>Komplette Saison</h3>
+              <p>Die Rundumbetreuung für eine vollständige Rennserie.</p>
+              <div class="price-tag">Auf Anfrage</div>
+              <ul class="price-features">
+                <li>Alle Meisterschaftsläufe</li>
+                <li>Umfassende Testfahrten</li>
+                <li>Ganzjährige Betreuung</li>
+                <li>Exklusive Karriereförderung</li>
+              </ul>
+              <a href="#apply" class="btn btn-secondary btn-navigate" style="width: 100%;">Anfragen</a>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            <p class="text-muted" style="font-size: 0.9rem;">
+              <strong>Hinweis zur Preisstruktur:</strong> Die konkreten Kosten richten sich nach Umfang, Rennserie, Anzahl der Testtage und individueller Betreuung. Nach Prüfung deines eingereichten Fahrerprofils erstellen wir dir ein transparentes, auf deine Ziele abgestimmtes Angebot.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= SECTION: FAHRER & CASE STUDY ================= -->
+    <section id="driver" class="page-section">
+      <div class="container">
+        <span class="badge">Erfolgsnachweis</span>
+        
+        <div class="case-study-hero">
+          <div class="case-study-media">
+            <img src="./downloaded_images/paatz2026astonmartinweiss-768x512.jpg" alt="Mathilda Paatz Aston Martin" class="main-study-img">
+          </div>
+          <div class="case-study-text">
+            <h2>Vom Nachwuchs in die F1 Academy: Case Study Mathilda Paatz</h2>
+            <p>Mathilda Paatz ist der lebende Beweis für das Ausbildungssystem von Mathilda Racing. Als Tochter des Teamgründers hat sie die Entwicklung vom Kartsport in die professionellen Formelserien selbst durchlaufen.</p>
+            
+            <h4 style="margin-top: 24px; color: var(--accent);">Der Weg:</h4>
+            <ul style="list-style: none; margin-top: 10px;">
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-accent"></i> <strong>Start:</strong> Erfolgreiche Kart-Karriere und systematische Vorbereitung auf den Formel-Testtag.</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-accent"></i> <strong>Aufbau:</strong> Ganzheitliches Training bei Partnern wie 321 Perform (Fitness, Reaktion, Ernährung).</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-accent"></i> <strong>Einstieg:</strong> Einsatz in der Formula Winter Series und der F4 CEZ Championship.</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-accent"></i> <strong>Erfolg:</strong> Aufnahme in das Aston Martin Nachwuchsprogramm und F1 Academy Aktivitäten.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="driver-stats-grid">
+          <!-- Stats card -->
+          <div class="stats-card">
+            <h3>Fahrerprofil Mathilda Paatz</h3>
+            <ul class="stats-list">
+              <li>
+                <span class="stats-label">Nationalität</span>
+                <span class="stats-value">Deutsch 🇩🇪</span>
+              </li>
+              <li>
+                <span class="stats-label">Alter</span>
+                <span class="stats-value">17 Jahre</span>
+              </li>
+              <li>
+                <span class="stats-label">Aktuelle Rennserien</span>
+                <span class="stats-value">F4 CEZ / F1 Academy</span>
+              </li>
+              <li>
+                <span class="stats-label">Erfolge</span>
+                <span class="stats-value">Podium FWS, Top 10 F4 CEZ</span>
+              </li>
+              <li>
+                <span class="stats-label">Förderung</span>
+                <span class="stats-value">Aston Martin Academy</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Partners card -->
+          <div class="stats-card">
+            <h3>Stimmen & Feedback</h3>
+            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 20px;">
+              "Das strukturierte Training von Mathilda Racing hat mir geholfen, den gewaltigen Unterschied in physischer Belastung und Datenanalyse zwischen Kart und Formel-4 in kürzester Zeit zu meistern."
+            </p>
+            <p style="text-align: right; font-weight: 700; font-size: 0.85rem; color: var(--accent);">
+              – Mathilda Paatz
+            </p>
+          </div>
+        </div>
+
+        <!-- IMAGE CAROUSEL GALLERY -->
+        <div class="gallery-section">
+          <h3 class="section-title">Impressionen der Rennstrecke</h3>
+          <p class="section-subtitle">Bilder von Testtagen und Meisterschaftsläufen in Europa.</p>
+          
+          <div class="carousel-container">
+            <button class="carousel-btn prev" aria-label="Vorheriges Bild"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next" aria-label="Nächstes Bild"><i class="fas fa-chevron-right"></i></button>
+            
+            <div class="carousel-track">
+              <!-- Slide 1 -->
+              <div class="carousel-slide">
+                <img src="./downloaded_images/2026_Paatz_Estoril_header_1000px.jpg" alt="F4 Testfahrten in Estoril">
+                <div class="carousel-caption">
+                  <h4>F4 Testfahrten in Estoril</h4>
+                  <p>Vorbereitung auf die Meisterschaft unter optimalen Bedingungen.</p>
+                </div>
+              </div>
+              
+              <!-- Slide 2 -->
+              <div class="carousel-slide">
+                <img src="./downloaded_images/Paatz_Barcelona_header_1000px.jpg" alt="Start der Formula Winter Series in Barcelona">
+                <div class="carousel-caption">
+                  <h4>Formula Winter Series Barcelona</h4>
+                  <p>Hartes Racing im hochkarätigen internationalen Starterfeld.</p>
+                </div>
+              </div>
+              
+              <!-- Slide 3 -->
+              <div class="carousel-slide">
+                <img src="./downloaded_images/Paatz_RBR1_header_1000px.jpg" alt="Red Bull Ring Training">
+                <div class="carousel-caption">
+                  <h4>Red Bull Ring</h4>
+                  <p>Fahrtraining auf der anspruchsvollen GP-Strecke in Österreich.</p>
+                </div>
+              </div>
+              
+              <!-- Slide 4 -->
+              <div class="carousel-slide">
+                <img src="./downloaded_images/2026_mara_RBR_3_1000px.jpg" alt="Formel-4 Auto Action">
+                <div class="carousel-caption">
+                  <h4>Formel-4 Action</h4>
+                  <p>Präzision und Speed auf dem Weg in die Punkteränge.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= SECTION: PARTNER (SPONSORING) ================= -->
+    <section id="partner" class="page-section">
+      <div class="container">
+        <span class="badge">B2B Kooperationen</span>
+        
+        <div class="partner-pitch">
+          <div class="pitch-text">
+            <h2>Erfolg beschleunigen - Partner werden</h2>
+            <p>Motorsport ist hochemotional, hochtechnologisch und erreicht Millionen von begeisterten Zuschauern weltweit. Eine Partnerschaft mit Mathilda Racing bietet Ihrem Unternehmen eine einzigartige Bühne.</p>
+            
+            <h4 style="margin-top: 24px; color: var(--accent); margin-bottom: 12px;">Warum Mathilda Racing?</h4>
+            <p style="font-size: 0.95rem; margin-bottom: 12px;">
+              <strong>Women in Motorsport:</strong> Mit Mathilda Paatz und unserem Nachwuchsprogramm besetzen wir das hochaktuelle und medienwirksame Thema der Förderung von Frauen im Spitzensport.
+            </p>
+            <p style="font-size: 0.95rem;">
+              <strong>B2B Netzwerk & Hospitality:</strong> Nutzen Sie unsere Rennwochenenden als exklusive B2B-Plattform, um Kunden, Partner und Mitarbeiter mit VIP-Tickets und Boxenführungen zu begeistern.
+            </p>
+          </div>
+          <div class="pitch-image" style="background-image: url('./downloaded_images/R1PF3357-1024x683.jpg');"></div>
+        </div>
+
+        <!-- BRANDING OPTIONS -->
+        <div class="branding-options">
+          <h3 class="section-title">Ihre Aktivierungsmöglichkeiten</h3>
+          <p class="section-subtitle">Maßgeschneiderte Werbe- und Kooperationsflächen für Ihr Marketing.</p>
+          
+          <div class="options-grid">
+            <div class="option-card">
+              <div class="option-icon"><i class="fas fa-car-side"></i></div>
+              <h3>Fahrzeug- & Teambranding</h3>
+              <p>Ihr Firmenlogo unübersehbar auf den F4 Rennwagen, Overalls, der Boxenausstattung, Teamkleidung und den Transport-Trucks.</p>
+            </div>
+            
+            <div class="option-card">
+              <div class="option-icon"><i class="fas fa-video"></i></div>
+              <h3>Social Media & Content</h3>
+              <p>Integrierte Brand-Storys, Video-Reels an Rennwochenenden, Onboard-Video-Platzierungen und Werbegenerierung über unsere digitale Reichweite.</p>
+            </div>
+            
+            <div class="option-card">
+              <div class="option-icon"><i class="fas fa-ticket"></i></div>
+              <h3>Hospitality & Events</h3>
+              <p>VIP-Zugang an den Rennwochenenden für Partner und Kunden, exklusive Führungen durch die Boxengasse und Firmen-Events an der Rennstrecke.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOGO WALL -->
+        <div class="logo-showcase">
+          <h3 class="section-title">Unsere Partner & Förderer</h3>
+          <p class="section-subtitle">Diese Marken vertrauen uns und unterstützen unsere Nachwuchsarbeit.</p>
+          
+          <div class="logo-grid">
+            <div class="logo-item">
+              <img src="./downloaded_images/321perform.webp" alt="321 Perform Logo">
+            </div>
+            <div class="logo-item">
+              <img src="./downloaded_images/stadtwaldpraxis.webp" alt="Stadtwaldpraxis Logo">
+            </div>
+            <div class="logo-item">
+              <img src="./downloaded_images/injoy.webp" alt="INJOY Logo">
+            </div>
+            <div class="logo-item">
+              <img src="./downloaded_images/profibu.webp" alt="Profibu Logo">
+            </div>
+            <div class="logo-item">
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 0.9rem; color: var(--text-secondary);">ASTON MARTIN ACADEMY</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#apply" class="btn btn-primary btn-navigate" id="sponsoring-form-btn">Sponsoring-Unterlagen anfordern <i class="fas fa-file-pdf"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= SECTION: BEWERBUNG & FORMULARE ================= -->
+    <section id="apply" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Bewerbung & Kontakt</h2>
+        <p class="section-subtitle">Wähle deinen Einstiegsweg und sende uns deine Daten zur Prüfung.</p>
+        
+        <div class="forms-container">
+          <div class="form-toggle-wrapper">
+            <button class="form-toggle-btn active" id="toggle-driver">Fahrer-Bewerbung</button>
+            <button class="form-toggle-btn" id="toggle-sponsor">Partner-Anfrage</button>
+          </div>
+
+          <!-- FORMPART 1: FAHRER BEWERBUNG -->
+          <div class="contact-form-section active" id="driver-form-wrapper">
+            <h3>Bewerbung für das Fahrerprogramm</h3>
+            <p style="margin-bottom: 30px; font-size: 0.95rem;">Reiche hier dein motorsportliches Profil ein, um dich für einen Sichtungstag, ein Entwicklungsprogramm oder einen Rennfahrerplatz zu bewerben.</p>
+            
+            <form id="form-driver">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="drv-name">Vollständiger Name *</label>
+                  <input type="text" id="drv-name" required placeholder="Vor- und Nachname">
+                </div>
+                <div class="form-group">
+                  <label for="drv-age">Alter *</label>
+                  <input type="number" id="drv-age" required min="10" max="99" placeholder="z.B. 15">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="drv-email">E-Mail-Adresse *</label>
+                  <input type="email" id="drv-email" required placeholder="name@beispiel.de">
+                </div>
+                <div class="form-group">
+                  <label for="drv-phone">Telefonnummer *</label>
+                  <input type="tel" id="drv-phone" required placeholder="+49 170 1234567">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="drv-experience">Bisherige Motorsporterfahrung (z.B. Kartklasse, Formeljahre) *</label>
+                <textarea id="drv-experience" required rows="4" placeholder="Beschreibe kurz deine bisherige Erfahrung, Meisterschaften und Lizenzen..."></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="drv-goal">Gewünschtes Programm *</label>
+                  <select id="drv-goal" required>
+                    <option value="" disabled selected>Bitte auswählen...</option>
+                    <option value="testtag">Sichtungs- / Testtag</option>
+                    <option value="development">Entwicklungsprogramm</option>
+                    <option value="season">Komplette Formel-4-Saison</option>
+                    <option value="unsure">Unschlüssig / Beratung gewünscht</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="drv-time">Geplanter Zeitrahmen *</label>
+                  <select id="drv-time" required>
+                    <option value="" disabled selected>Bitte auswählen...</option>
+                    <option value="now">Sofort / Aktuelle Saison</option>
+                    <option value="soon">Innerhalb der nächsten 3 Monate</option>
+                    <option value="next_season">Kommende Saison (2026/2027)</option>
+                    <option value="longterm">Langfristige Planung</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="drv-onboard">Link zu Onboard-Videos (z.B. YouTube, Vimeo) - Optional</label>
+                <input type="text" id="drv-onboard" placeholder="https://www.youtube.com/watch?...">
+              </div>
+
+              <div class="form-group">
+                <label>Unterlagen (Motorsport CV / Ergebnislisten) - Optional</label>
+                <div class="file-upload-wrapper" id="cv-upload-box">
+                  <i class="fas fa-cloud-arrow-up"></i>
+                  <p id="upload-box-text">Zieh dein Motorsport-CV / Ergebnislisten hierhin oder <span class="text-accent" style="text-decoration: underline;">klicke zum Durchsuchen</span></p>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;">Fahrerprofil zur Prüfung einreichen <i class="fas fa-paper-plane"></i></button>
+            </form>
+            <div id="driver-feedback" class="form-feedback"></div>
+          </div>
+
+          <!-- FORMPART 2: PARTNER BEWERBUNG -->
+          <div class="contact-form-section" id="sponsor-form-wrapper">
+            <h3>Kooperationsanfrage für Sponsoring & B2B</h3>
+            <p style="margin-bottom: 30px; font-size: 0.95rem;">Fordern Sie unser detailliertes Sponsoring-Exposé an oder beschreiben Sie uns Ihre Branding- und Aktivierungsziele im Motorsport.</p>
+            
+            <form id="form-sponsor">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sp-company">Firmenname *</label>
+                  <input type="text" id="sp-company" required placeholder="Muster GmbH">
+                </div>
+                <div class="form-group">
+                  <label for="sp-contact">Ansprechpartner *</label>
+                  <input type="text" id="sp-contact" required placeholder="Dr. Max Mustermann">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sp-email">E-Mail-Adresse *</label>
+                  <input type="email" id="sp-email" required placeholder="beispiel@firma.de">
+                </div>
+                <div class="form-group">
+                  <label for="sp-phone">Telefonnummer *</label>
+                  <input type="tel" id="sp-phone" required placeholder="+49 40 123456">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="sp-goals">Kooperationsziele (z.B. Branding, Hospitality, Social Content) *</label>
+                <textarea id="sp-goals" required rows="4" placeholder="Welche Ziele verfolgt Ihr Unternehmen mit einer Motorsport-Partnerschaft? Welche Aktivierungen sind für Sie interessant?"></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sp-budget">Budgetrahmen (Optional)</label>
+                  <select id="sp-budget">
+                    <option value="" selected>Bitte auswählen...</option>
+                    <option value="test">Test- / Einstiegspaket</option>
+                    <option value="medium">Mittelgroßes Sponsoring-Paket</option>
+                    <option value="season">Hauptsponsoring / Saison-Kooperation</option>
+                    <option value="unsure">Noch unsicher / Beratungsbedarf</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sp-time">Planungszeitraum</label>
+                  <select id="sp-time">
+                    <option value="now" selected>Sofortiger Start</option>
+                    <option value="next_season">Nächste Rennsaison</option>
+                    <option value="consulting">Zunächst unverbindliche Beratung</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;">Sponsoring-Unterlagen anfordern <i class="fas fa-file-pdf"></i></button>
+            </form>
+            <div id="sponsor-feedback" class="form-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION: FAQS ================= -->
+    <section id="faq" class="page-section">
+      <div class="container">
+        <span class="badge">Häufige Fragen</span>
+        <h2 class="section-title">FAQ-Bereich</h2>
+        <p class="section-subtitle">Hier findest du Antworten zu unserem Fahrer-Förderprogramm sowie zu Sponsoring- und Partnerkooperationen.</p>
+        
+        <div class="faq-search">
+          <input type="text" id="faq-search-input" placeholder="Nach Stichwort suchen (z.B. Alter, Kosten, Sicherheit)..." style="width: 100%;">
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Ab welchem Alter kann ich am Fahrerprogramm teilnehmen?
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Unser Formel-4-Förderprogramm richtet sich primär an Nachwuchstalente im Alter von 13 bis 17 Jahren, die den Übergang vom Kartsport in den Formelsport anstreben. Für reine Testtage können unter bestimmten Voraussetzungen auch jüngere oder leicht ältere Fahrer berücksichtigt werden.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Benötige ich bereits eine Rennlizenz?
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Für die Teilnahme an Sichtungs- und Testtagen ist in der Regel noch keine internationale Lizenz zwingend erforderlich (oft genügt eine nationale Lizenz oder der Nachweis einer Kart-Historie). Für offizielle Renneinsätze in Meisterschaften wie der F4 CEZ oder der Formula Winter Series ist eine entsprechende FIA-Rennlizenz vorgeschrieben. Wir unterstützen unsere Fahrer im Rahmen der Vorbereitung vollumfänglich beim Beantragen und Erlangen der erforderlichen Lizenzstufen.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Wie läuft die Auswahl und Fahrerpotenzialprüfung ab?
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Der Prozess beginnt mit dem Einreichen deines Fahrerprofils über unser Bewerbungsformular. Nach einer positiven Erstprüfung laden wir dich und deine Eltern zu einem Erstgespräch ein, in dem wir deine Ziele und Rahmenbedingungen besprechen. Der nächste Schritt ist ein praktischer Sichtungstag auf einer Rennstrecke, bei dem wir deine fahrerische Leistung, die Zusammenarbeit mit den Ingenieuren und deine Daten analysieren, um ein maßgeschneidertes Entwicklungsangebot zu erstellen.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Wie lassen sich Schule und Rennsport zeitlich miteinander vereinbaren?
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Die schulische Ausbildung hat Priorität. Unser Betreuungsteam koordiniert Testtage und Renneinsätze so flexibel wie möglich und steht im Austausch mit den Eltern, um Lernphasen und Prüfungszeiträume zu berücksichtigen. Viele unserer Trainingsmodule (wie Fitness, Datenanalyse-Schulungen und Simulatorarbeit) können zudem flexibel an Wochenenden oder am späten Nachmittag durchgeführt werden.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Unterstützt Mathilda Racing bei der Sponsorensuche?
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Ja, im Rahmen unseres ganzheitlichen Entwicklungsplans bieten wir ein Modul für Sponsoren- und Medienkompetenz an. Wir schulen Fahrer darin, sich professionell vor Sponsoren zu präsentieren, erstellen professionelles Pressematerial (wie z.B. Fahrer-Steckbriefe und Pressekits) und binden Fahrer aktiv in das B2B-Partnernetzwerk unseres Teams ein, um Kontakte zu potenziellen Förderern herzustellen.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Welche Sponsoringpakete gibt es für Partnerunternehmen?
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Wir bieten Sponsoren ein breites Spektrum an Aktivierungen: Dies reicht von klassischen Logos auf Rennfahrzeugen, Teamoveralls und LKW-Aufliegern über digitale Werbemöglichkeiten (Social-Media-Kampagnen und Onboard-Video-Integrationen) bis hin zu VIP-Hospitality-Wochenenden an den europäischen Rennstrecken und exklusiven Kunden- und Teamevents mit den Fahrzeugen. Jedes Partnerschaftspaket wird individuell an die Kommunikationsziele Ihres Unternehmens angepasst.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              Welche Reichweite und Zielgruppe erreicht ein Sponsoring?
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Als etabliertes Team mit hoher Medienpräsenz bieten wir Partnern Zugang zu einer motorsportbegeisterten und kaufkräftigen Zielgruppe. Die Formel-Nachwuchsserien werden weltweit übertragen und stoßen online auf hohes Interesse. Zudem besetzen wir mit unserem Engagement für Nachwuchsfahrerinnen im Spitzensport (z.B. F1 Academy und Aston Martin Nachwuchsakademien) ein hochaktuelles und reichweitenstarkes Medienthema.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo-wrapper" style="margin-bottom: 20px;">
+          <img src="./downloaded_images/mathildaLogo-min-300x141-1.png" alt="Mathilda Racing Logo">
+          <div class="logo-text">MATHILDA<span>RACING</span></div>
+        </div>
+        <p>Ihr professionelles Motorsportteam für Nachwuchsförderung, Talentaufbau und Fahrerplätze in der Formel 4.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mathildaracing/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home" class="btn-navigate">Startseite</a></li>
+          <li><a href="#program" class="btn-navigate">Talentförderung</a></li>
+          <li><a href="#driver" class="btn-navigate">Fahrer & Case Study</a></li>
+          <li><a href="#partner" class="btn-navigate">Partner werden</a></li>
+          <li><a href="#apply" class="btn-navigate">Bewerbung</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Fahrerprogramm</h4>
+        <ul class="footer-links">
+          <li><a href="#program" class="btn-navigate">Sichtungs- / Testtage</a></li>
+          <li><a href="#program" class="btn-navigate">Fahrer-Coaching</a></li>
+          <li><a href="#driver" class="btn-navigate">Mathilda Paatz Steckbrief</a></li>
+          <li><a href="#apply" class="btn-navigate">Fahrerprofil einreichen</a></li>
+          <li><a href="#faq" class="btn-navigate">Häufige Fragen (FAQ)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt & Impressum</h4>
+        <p><i class="fas fa-envelope text-accent"></i> info@mathilda-racing.de</p>
+        <p><i class="fas fa-phone text-accent"></i> +49 (0) 221 123456</p>
+        <p><i class="fas fa-location-dot text-accent"></i> Köln, Deutschland</p>
+        <p style="font-size:0.8rem; color: var(--text-muted); margin-top:10px;">Partner werden: Kontaktieren Sie uns für Sponsoring-Unterlagen.</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Mathilda Racing. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal-links">
+        <a href="#home" class="btn-navigate">Datenschutz</a>
+        <a href="#home" class="btn-navigate">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script initialization -->
+  <script src="app.js"></script>
+</body>
+</html>
