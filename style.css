@@ -1322,8 +1322,34 @@ footer {
   text-transform: uppercase;
 }
 
-.footer-legal-links a:hover {
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 20px;
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 2px 4px;
+}
+
+.lang-btn.active, .lang-btn:hover {
   color: var(--accent);
+}
+
+.lang-separator {
+  color: var(--border-color);
+  margin: 0 4px;
 }
 
 /* Responsive adjustments */
@@ -1364,6 +1390,10 @@ footer {
   }
   .mobile-nav-toggle {
     display: flex;
+  }
+  .lang-switcher {
+    margin-left: auto;
+    margin-right: 15px;
   }
 
   /* Bento grid layouts -> 1 column */

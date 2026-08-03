@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- LOCALIZED FEEDBACK & FORM MESSAGES ---
+  const feedbackMessages = {
+    de: {
+      fileReady: "✓ Datei bereit",
+      cvReset: "Zieh dein Motorsport-CV / Ergebnislisten hierhin oder <span class='text-accent' style='text-decoration: underline;'>klicke zum Durchsuchen</span>",
+      driverSuccessTitle: "Vielen Dank für deine Bewerbung!",
+      driverSuccessText: "Dein Fahrerprofil wurde erfolgreich eingereicht. Unser Coaching- und Ingenieursteam prüft deine Daten persönlich. Wir melden uns innerhalb der nächsten 48 Stunden bei dir.",
+      sponsorSuccessTitle: "Vielen Dank für Ihre Anfrage!",
+      sponsorSuccessText: "Ihre Partneranfrage wurde erfolgreich übermittelt. Wir senden Ihnen das detaillierte Sponsoring-Exposé zu und setzen uns für ein erstes persönliches Kennenlernen kurzfristig mit Ihnen in Verbindung.",
+      submitting: "Wird übermittelt..."
+    },
+    en: {
+      fileReady: "✓ File ready",
+      cvReset: "Drag your motorsport CV / result lists here or <span class='text-accent' style='text-decoration: underline;'>click to browse</span>",
+      driverSuccessTitle: "Thank you for your application!",
+      driverSuccessText: "Your driver profile was successfully submitted. Our coaching and engineering team will personally review your details. We will get in touch with you within the next 48 hours.",
+      sponsorSuccessTitle: "Thank you for your inquiry!",
+      sponsorSuccessText: "Your partnership inquiry was successfully submitted. We will send you the detailed sponsorship exposé and contact you shortly for a personal introduction.",
+      submitting: "Submitting..."
+    }
+  };
   // --- 1. ROUTING & TAB NAVIGATION ---
   const navLinks = document.querySelectorAll("nav ul li a, .btn-navigate");
   const sections = document.querySelectorAll(".page-section");
@@ -175,7 +196,9 @@ document.addEventListener("DOMContentLoaded", () => {
       dummyInput.onchange = (e) => {
         if (e.target.files.length > 0) {
           const file = e.target.files[0];
-          uploadText.innerHTML = `<span style="color: var(--accent); font-weight: 600;">✓ Datei bereit:</span> ${file.name} (${(file.size / (1024 * 1024)).toFixed(2)} MB)`;
+          const lang = localStorage.getItem("selectedLanguage") || "de";
+          const fileReadyText = feedbackMessages[lang].fileReady;
+          uploadText.innerHTML = `<span style="color: var(--accent); font-weight: 600;">${fileReadyText}:</span> ${file.name} (${(file.size / (1024 * 1024)).toFixed(2)} MB)`;
           uploadBox.style.borderColor = "var(--accent)";
           uploadBox.style.background = "rgba(234, 91, 12, 0.03)";
         }
@@ -192,9 +215,10 @@ document.addEventListener("DOMContentLoaded", () => {
     driverForm.addEventListener("submit", (e) => {
       e.preventDefault();
       
+      const lang = localStorage.getItem("selectedLanguage") || "de";
       const submitBtn = driverForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = "Wird übermittelt...";
+      submitBtn.innerHTML = feedbackMessages[lang].submitting;
       submitBtn.disabled = true;
       
       // Simulate API request delay
@@ -205,12 +229,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // Show success feedback
         const feedback = document.getElementById("driver-feedback");
         feedback.className = "form-feedback success";
-        feedback.innerHTML = "<h4>Vielen Dank für deine Bewerbung!</h4><p>Dein Fahrerprofil wurde erfolgreich eingereicht. Unser Coaching- und Ingenieursteam prüft deine Daten persönlich. Wir melden uns innerhalb der nächsten 48 Stunden bei dir.</p>";
+        feedback.innerHTML = `<h4>${feedbackMessages[lang].driverSuccessTitle}</h4><p>${feedbackMessages[lang].driverSuccessText}</p>`;
         driverForm.reset();
         
         // Reset file upload text
         if (uploadText) {
-          uploadText.innerHTML = "Zieh dein Motorsport-CV / Ergebnislisten hierhin oder <span class='text-accent' style='text-decoration: underline;'>klicke zum Durchsuchen</span>";
+          uploadText.innerHTML = feedbackMessages[lang].cvReset;
           uploadBox.style.borderColor = "var(--border-color)";
           uploadBox.style.background = "rgba(255, 255, 255, 0.01)";
         }
@@ -225,9 +249,10 @@ document.addEventListener("DOMContentLoaded", () => {
     sponsorForm.addEventListener("submit", (e) => {
       e.preventDefault();
       
+      const lang = localStorage.getItem("selectedLanguage") || "de";
       const submitBtn = sponsorForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = "Wird übermittelt...";
+      submitBtn.innerHTML = feedbackMessages[lang].submitting;
       submitBtn.disabled = true;
       
       // Simulate API request delay
@@ -238,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Show success feedback
         const feedback = document.getElementById("sponsor-feedback");
         feedback.className = "form-feedback success";
-        feedback.innerHTML = "<h4>Vielen Dank für Ihre Anfrage!</h4><p>Ihre Partneranfrage wurde erfolgreich übermittelt. Wir senden Ihnen das detaillierte Sponsoring-Exposé zu und setzen uns für ein erstes persönliches Kennenlernen kurzfristig mit Ihnen in Verbindung.</p>";
+        feedback.innerHTML = `<h4>${feedbackMessages[lang].sponsorSuccessTitle}</h4><p>${feedbackMessages[lang].sponsorSuccessText}</p>`;
         sponsorForm.reset();
         
         // Scroll feedback into view
@@ -272,6 +297,51 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // --- 8. LANGUAGE SWITCHER LOGIC ---
+  const langButtons = document.querySelectorAll(".lang-btn");
+  
+  function applyLanguage(lang) {
+    // Set active class on switcher buttons
+    langButtons.forEach(btn => {
+      if (btn.getAttribute("data-lang") === lang) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+
+    // Apply translations across all selectors
+    if (typeof translations !== "undefined" && translations[lang]) {
+      const langData = translations[lang];
+      for (const selector in langData) {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+          if (element.tagName === "INPUT") {
+            // Update placeholders for search fields
+            element.placeholder = langData[selector];
+          } else {
+            // Update text content / HTML markup for nodes
+            element.innerHTML = langData[selector];
+          }
+        });
+      }
+    }
+    
+    // Persist language choice
+    localStorage.setItem("selectedLanguage", lang);
+  }
+
+  langButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang");
+      applyLanguage(lang);
+    });
+  });
+
+  // Load language from storage or default to German
+  const savedLang = localStorage.getItem("selectedLanguage") || "de";
+  applyLanguage(savedLang);
 
   // --- HERO SLIDESHOW LOGIC ---
   const heroSlides = document.querySelectorAll(".hero-slide");
