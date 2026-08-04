@@ -1535,6 +1535,10 @@ footer {
     padding: 50px 24px;
   }
 
+  .marquee-track img {
+    height: 46px;
+  }
+
   /* Pricing grid -> 2 columns */
   .pricing-grid,
   .partner-pricing .pricing-grid {
@@ -1613,6 +1617,10 @@ footer {
   }
   .trust-item:last-child {
     border-bottom: none !important;
+  }
+
+  .marquee-track img {
+    height: 42px;
   }
 
   /* Pricing grid -> 1 column */
@@ -1856,17 +1864,16 @@ footer {
 }
 
 .marquee-track img {
-  height: 38px;
+  height: 52px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1) brightness(0.7) contrast(1.2);
-  opacity: 0.6;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .marquee-track img:hover {
-  filter: grayscale(0) brightness(1) contrast(1);
   opacity: 1;
+  transform: scale(1.08);
 }
 
 @keyframes scroll-marquee {
