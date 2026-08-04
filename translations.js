@@ -7,6 +7,8 @@ const translations = {
     "nav ul li:nth-child(4) a": "Partner werden",
     "nav ul li:nth-child(5) a": "Bewerbung",
     "nav ul li:nth-child(6) a": "FAQs",
+    ".header-contact a:nth-child(1) span": "Anruf",
+    ".header-contact a:nth-child(2) span": "Mail",
     
     // Hero Sektion
     ".hero-content-wrapper .badge": "Formel 4 & Nachwuchsförderung",
@@ -240,6 +242,8 @@ const translations = {
     "nav ul li:nth-child(4) a": "Become a Partner",
     "nav ul li:nth-child(5) a": "Apply",
     "nav ul li:nth-child(6) a": "FAQs",
+    ".header-contact a:nth-child(1) span": "Call",
+    ".header-contact a:nth-child(2) span": "Email",
     
     // Hero Sektion
     ".hero-content-wrapper .badge": "Formula 4 & Youth Talent Development",

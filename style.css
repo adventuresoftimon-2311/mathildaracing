@@ -1330,6 +1330,37 @@ footer {
   text-transform: uppercase;
 }
 
+/* Header Contact Buttons */
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.contact-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.contact-btn i {
+  font-size: 0.8rem;
+}
+
 /* Language Switcher */
 .lang-switcher {
   display: flex;
@@ -1399,8 +1430,12 @@ footer {
   .mobile-nav-toggle {
     display: flex;
   }
-  .lang-switcher {
+  .header-contact {
     margin-left: auto;
+    margin-right: 10px;
+  }
+  .lang-switcher {
+    margin-left: 0;
     margin-right: 15px;
   }
 
@@ -1528,6 +1563,12 @@ footer {
   }
   header.scrolled .logo-wrapper img {
     height: 34px;
+  }
+  .contact-btn span {
+    display: none;
+  }
+  .contact-btn {
+    padding: 5px 8px;
   }
 
   /* Mobile text scale */
