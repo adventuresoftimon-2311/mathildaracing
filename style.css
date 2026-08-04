@@ -1805,3 +1805,75 @@ footer {
     transform: scale(1.1);
   }
 }
+
+/* Infinite Sponsor Marquee */
+.sponsor-marquee-section {
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.01);
+  padding: 35px 0;
+  overflow: hidden;
+}
+
+.marquee-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+  position: relative;
+}
+
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 80px;
+  animation: scroll-marquee 25s linear infinite;
+  align-items: center;
+  min-width: 200%;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-track img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.7) contrast(1.2);
+  opacity: 0.6;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.marquee-track img:hover {
+  filter: grayscale(0) brightness(1) contrast(1);
+  opacity: 1;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
