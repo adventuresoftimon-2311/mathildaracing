@@ -438,6 +438,10 @@ main {
   border: 1px solid var(--border-color);
 }
 
+.grid-cards.grid-2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
   background: var(--bg-card);
   padding: 50px 40px;
