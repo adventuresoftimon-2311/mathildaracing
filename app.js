@@ -82,6 +82,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const faqItems = document.querySelectorAll(".faq-item");
   const faqSearch = document.getElementById("faq-search-input");
 
+  // --- 4b. GERMAN F4 ACCORDION LOGIC ---
+  const f4FaqItems = document.querySelectorAll(".f4-faq-item");
+  f4FaqItems.forEach(item => {
+    const question = item.querySelector(".f4-faq-question");
+    if (question) {
+      question.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+        f4FaqItems.forEach(i => i.classList.remove("active"));
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    }
+  });
+
   faqItems.forEach(item => {
     const question = item.querySelector(".faq-question");
     question.addEventListener("click", () => {

@@ -1203,13 +1203,13 @@ textarea:focus {
   border-top: 1px solid var(--border-color);
 }
 
-.faq-item {
+.faq-item, .f4-faq-item {
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-card);
   transition: var(--transition);
 }
 
-.faq-question {
+.faq-question, .f4-faq-question {
   padding: 24px;
   cursor: pointer;
   display: flex;
@@ -1220,7 +1220,7 @@ textarea:focus {
   font-size: 1.1rem;
 }
 
-.faq-answer {
+.faq-answer, .f4-faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1228,25 +1228,25 @@ textarea:focus {
   border-top: 1px solid transparent;
 }
 
-.faq-answer-inner {
+.faq-answer-inner, .f4-faq-answer-inner {
   padding: 24px 30px;
   font-size: 0.95rem;
   color: var(--text-secondary);
 }
 
-.faq-item.active .faq-answer {
+.faq-item.active .faq-answer, .f4-faq-item.active .f4-faq-answer {
   max-height: 500px;
   border-top-color: var(--border-color);
 }
 
-.faq-toggle-icon {
+.faq-toggle-icon, .f4-faq-toggle-icon {
   font-family: var(--font-mono);
   font-size: 1.2rem;
   color: var(--text-muted);
   transition: var(--transition);
 }
 
-.faq-item.active .faq-toggle-icon {
+.faq-item.active .faq-toggle-icon, .f4-faq-item.active .f4-faq-toggle-icon {
   transform: rotate(45deg);
   color: var(--accent);
 }
