@@ -1670,6 +1670,117 @@ footer {
   }
 }
 
+/* Multi-step Form Progress & Styling */
+.form-progress {
+  position: relative;
+  margin-bottom: 40px;
+  background: var(--border-muted);
+  height: 2px;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+}
+
+.step-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.step-num.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.step-num.completed {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  background: rgba(234, 91, 12, 0.1);
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-step textarea {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 12px 15px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-step textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-step select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.checkbox-group label a {
+  transition: var(--transition);
+}
+
+.checkbox-group label a:hover {
+  color: var(--accent);
+}
+
+.invalid-feedback {
+  color: #ff3b30;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-group.has-error input,
+.form-group.has-error textarea,
+.form-group.has-error select {
+  border-color: #ff3b30 !important;
+}
+
+.form-group.has-error .invalid-feedback {
+  display: block;
+}
+
 /* Animations */
 @keyframes slowZoom {
   from {

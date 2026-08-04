@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahrerprogramm & Sichtungstage | Mathilda Racing</title>
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="./downloaded_images/mathildaLogo-min-300x141-1.png" alt="Mathilda Racing Logo" id="site-logo">
+      </a>
+      
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="fahrerprogramm.html" class="active">Fahrerprogramm</a></li>
+          <li><a href="partner.html">Partner werden</a></li>
+          <li><a href="fahrerprogramm.html#apply" class="btn-navigate">Bewerbung</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-contact">
+        <a href="tel:+49221123456" class="contact-btn"><i class="fas fa-phone"></i> <span>Anruf</span></a>
+        <a href="mailto:info@mathilda-racing.de" class="contact-btn"><i class="fas fa-envelope"></i> <span>Mail</span></a>
+      </div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <span class="lang-separator">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Navigation umschalten" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- HERO SEKTION -->
+    <section class="page-section active" style="padding-top: 140px; min-height: 85vh; display: flex; align-items: center; background-image: linear-gradient(rgba(12,13,16,0.85), rgba(12,13,16,0.92)), url('./downloaded_images/R1PF1729.jpeg'); background-size: cover; background-position: center 38%;">
+      <div class="container">
+        <div class="hero-content-wrapper" style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <span class="badge" data-i18n="drv-hero-badge">Mehr als ein Cockpit</span>
+          <h1 style="font-size: 3.2rem; margin: 20px 0; text-transform: uppercase;" data-i18n="drv-hero-title">Dein strukturierter Weg in den Formelsport</h1>
+          <p class="sub-headline" style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 40px; line-height: 1.6;" data-i18n="drv-hero-subtitle">
+            Vom Kartsport in das Formel-4-Cockpit. Wir begleiten dich und deine Eltern mit ehrlichem Feedback, professioneller Ausbildung und maßgeschneiderten Testtagen.
+          </p>
+          <div class="hero-ctas" style="display: flex; justify-content: center; gap: 20px;">
+            <a href="#apply" class="btn btn-primary" data-i18n="drv-hero-cta-primary">Fahrerprofil einreichen</a>
+            <a href="#program" class="btn btn-secondary" data-i18n="drv-hero-cta-secondary">Ablauf kennenlernen</a>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 15px; font-family: var(--font-mono);" data-i18n="drv-hero-note">
+            [ Unverbindliche Bewerbung. Persönliche Prüfung jedes Fahrerprofils. ]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZIELGRUPPEN FILTER (Für wen / Für wen nicht) -->
+    <section class="offering-section" style="border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <span class="badge" data-i18n="drv-filter-badge">Zielgruppe</span>
+        <h2 class="section-title" data-i18n="drv-filter-title">Passt das Fahrerprogramm zu dir?</h2>
+        <p class="section-subtitle" data-i18n="drv-filter-subtitle">Rennsport-Ausbildung erfordert die richtige Einstellung. Wir arbeiten selektiv, um die beste Qualität für unsere Fahrer zu garantieren.</p>
+        
+        <div class="grid-cards">
+          <!-- Für wen geeignet -->
+          <div class="card">
+            <h3 style="color: var(--accent);" data-i18n="drv-filter-for-title">Für wen das Programm entwickelt wurde:</h3>
+            <ul class="card-list">
+              <li data-i18n="drv-filter-for-1">Ambitionierte Kartfahrer vor dem Umstieg in das Automobil.</li>
+              <li data-i18n="drv-filter-for-2">Nachwuchsfahrer, die eine ehrliche Einschätzung ihres Potenzials suchen.</li>
+              <li data-i18n="drv-filter-for-3">Eltern, die eine transparente und sichere Ausbildung für ihr Kind wünschen.</li>
+              <li data-i18n="drv-filter-for-4">Fahrer, die bereit sind, hart an ihrer physischen und mentalen Fitness zu arbeiten.</li>
+            </ul>
+          </div>
+          
+          <!-- Für wen nicht geeignet -->
+          <div class="card">
+            <h3 style="color: var(--text-muted);" data-i18n="drv-filter-not-title">Für wen das Programm nicht geeignet ist:</h3>
+            <ul class="card-list">
+              <li data-i18n="drv-filter-not-1">Fahrer ohne ernsthafte Bereitschaft zur ständigen Leistungsentwicklung.</li>
+              <li data-i18n="drv-filter-not-2">Bewerber, die ausschließlich einen Fahrerplatz ohne systematisches Training kaufen möchten.</li>
+              <li data-i18n="drv-filter-not-3">Interessenten, die unrealistische, sofortige Karrieregarantien erwarten.</li>
+              <li data-i18n="drv-filter-not-4">Fahrer, die ehrliches und kritisches Feedback von Coaches nicht akzeptieren können.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIE 4 SÄULEN (Ausbildungssystem) -->
+    <section id="program" class="process-section" style="border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <span class="badge" data-i18n="drv-pillars-badge">Entwicklungssystem</span>
+        <h2 class="section-title" data-i18n="drv-pillars-title">Unser ganzheitlicher Entwicklungsansatz</h2>
+        <p class="section-subtitle" data-i18n="drv-pillars-subtitle">Ein Cockpit bringt dich an den Start. Unser System bringt dich an die Spitze. Wir teilen unsere Ausbildung in vier Kernbereiche.</p>
+        
+        <div class="timeline" style="margin-top: 60px;">
+          <!-- Säule 1 -->
+          <div class="timeline-step">
+            <div class="step-badge">01</div>
+            <h4 data-i18n="drv-pillar-1-title">Potenzialanalyse</h4>
+            <p data-i18n="drv-pillar-1-text">Jeder Weg beginnt mit einer ehrlichen Bestandsaufnahme. Bei unseren Sichtungs- und Testtagen analysieren wir deine Fahrtechnik, deine Lernkurve und deine Auffassungsgabe direkt auf der Rennstrecke und im High-End Simulator.</p>
+          </div>
+          <!-- Säule 2 -->
+          <div class="timeline-step">
+            <div class="step-badge">02</div>
+            <h4 data-i18n="drv-pillar-2-title">Physische & Mentale Stärke</h4>
+            <p data-i18n="drv-pillar-2-text">Motorsport fordert Körper und Geist extrem heraus. Gemeinsam mit professionellen Trainern entwickeln wir deine rennsportspezifische Nacken- und Rumpfmuskulatur, steigern deine Reaktionsschnelligkeit und stärken deine mentale Belastbarkeit unter Höchstdruck.</p>
+          </div>
+          <!-- Säule 3 -->
+          <div class="timeline-step">
+            <div class="step-badge">03</div>
+            <h4 data-i18n="drv-pillar-3-title">Technische Perfektion</h4>
+            <p data-i18n="drv-pillar-3-text">Ein moderner Formelfahrer muss Daten verstehen. Durch systematisches Telemetrie- und Video-Coaching lernst du, Bremsdrücke, Lenkwinkel und Ideallinien eigenständig zu analysieren und direkt mit den Daten deines Ingenieurs umzusetzen.</p>
+          </div>
+          <!-- Säule 4 -->
+          <div class="timeline-step">
+            <div class="step-badge">04</div>
+            <h4 data-i18n="drv-pillar-4-title">Karriere- & Budgetplanung</h4>
+            <p data-i18n="drv-pillar-4-text">Wir planen deine Motorsport-Zukunft nachhaltig. Das beinhaltet die Ausarbeitung realistischer, stufenweiser Saisonbudgets, die Auswahl der passenden Meisterschaften und aktive Unterstützung bei der Erstellung deines professionellen Sponsoren-Exposés.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREISE & MODULE -->
+    <section class="pathway-section" style="border-bottom: 1px solid var(--border-color); padding: 100px 0;">
+      <div class="container">
+        <span class="badge" data-i18n="drv-pricing-badge">Pakete</span>
+        <h2 class="section-title" data-i18n="drv-pricing-title">Deine Einstiegsmöglichkeiten</h2>
+        <p class="section-subtitle" data-i18n="drv-pricing-subtitle">Modulare Pakete angepasst an deinen aktuellen Entwicklungsstand im Formelsport.</p>
+        
+        <div class="pricing-grid" style="margin-top: 60px;">
+          <!-- Modul A -->
+          <div class="price-card featured">
+            <h3 data-i18n="drv-price-card-1-title">Sichtungs- / Testtag</h3>
+            <p data-i18n="drv-price-card-1-desc">Der ideale Einstieg, um das Auto und unser Team kennenzulernen.</p>
+            <div class="price-tag" data-i18n="drv-price-card-1-price">Ab € 4.900</div>
+            <ul class="price-features">
+              <li data-i18n="drv-price-card-1-feat-1">Technische Einweisung & Cockpit-Sitzanpassung</li>
+              <li data-i18n="drv-price-card-1-feat-2">Aktiver F4 Rennwagen inkl. Reifenkontingent</li>
+              <li data-i18n="drv-price-card-1-feat-3">Instruktor-Coaching und Datenanalyse</li>
+              <li data-i18n="drv-price-card-1-feat-4">Ehrliches Abschluss-Feedback & Standortbestimmung</li>
+            </ul>
+            <a href="#apply" class="btn btn-primary" style="width: 100%;" data-i18n="drv-price-card-1-btn">Für Testtag bewerben</a>
+          </div>
+          
+          <!-- Modul B -->
+          <div class="price-card">
+            <h3 data-i18n="drv-price-card-2-title">Entwicklungsprogramm</h3>
+            <p data-i18n="drv-price-card-2-desc">Gezieltes Training zur Vorbereitung auf den Formelsport.</p>
+            <div class="price-tag" data-i18n="drv-price-card-2-price">Auf Anfrage</div>
+            <ul class="price-features">
+              <li data-i18n="drv-price-card-2-feat-1">Regelmäßige Simulator-Einheiten</li>
+              <li data-i18n="drv-price-card-2-feat-2">Individuelles Fitness- & Mentalcoaching</li>
+              <li data-i18n="drv-price-card-2-feat-3">Vorbereitung auf Rennwochenenden</li>
+              <li data-i18n="drv-price-card-2-feat-4">Telemetrie-Schulungen & Video-Coaching</li>
+            </ul>
+            <a href="#apply" class="btn btn-secondary" style="width: 100%;" data-i18n="drv-price-card-2-btn">Programm anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY & PROOF (Mathilda Paatz) -->
+    <section id="case-study" class="driver-section" style="border-bottom: 1px solid var(--border-color); padding: 100px 0;">
+      <div class="container">
+        <span class="badge" data-i18n="drv-study-badge">Erfolgsnachweis</span>
+        
+        <div class="case-study-hero" style="margin-top: 40px;">
+          <div class="case-study-media">
+            <img src="./downloaded_images/R5PF8905.jpeg" alt="Mathilda Paatz Professional Driver Profile" class="main-study-img">
+          </div>
+          <div class="case-study-text">
+            <span class="mono-label" data-i18n="drv-study-label">[ Case Study / Referenz ]</span>
+            <h2 data-i18n="drv-study-title">Vom Nachwuchs in die F1 Academy: Case Study Mathilda Paatz</h2>
+            <p data-i18n="drv-study-desc">Mathilda Paatz ist der lebende Beweis für das Ausbildungssystem von Mathilda Racing. Als Tochter des Teamgründers hat sie die Entwicklung vom Kartsport in die professionellen Formelserien selbst durchlaufen.</p>
+            <ul class="phase-list" style="list-style: none; margin-top: 30px;">
+              <li style="margin-bottom: 15px;" data-i18n="drv-study-step-1"><strong>Start:</strong> Erfolgreiche Kart-Karriere und systematische Vorbereitung auf den Formel-Testtag.</li>
+              <li style="margin-bottom: 15px;" data-i18n="drv-study-step-2"><strong>Aufbau:</strong> Ganzheitliches Training bei Partnern wie 321 Perform (Fitness, Reaktion, Ernährung).</li>
+              <li style="margin-bottom: 15px;" data-i18n="drv-study-step-3"><strong>Einstieg:</strong> Einsatz in der Formula Winter Series und der F4 CEZ Championship.</li>
+              <li style="margin-bottom: 15px;" data-i18n="drv-study-step-4"><strong>Erfolg:</strong> Aufnahme in das Aston Martin Nachwuchsprogramm und F1 Academy Aktivitäten.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="driver-stats-grid" style="margin-top: 60px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; border-top: 1px solid var(--border-color); padding-top: 50px;">
+          <div class="stats-card">
+            <h3 data-i18n="drv-stats-title">Fahrerprofil Mathilda Paatz</h3>
+            <ul class="stats-list" style="list-style: none; margin-top: 20px;">
+              <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-muted);"><span class="stats-label" data-i18n="drv-stats-label-name">Name</span><strong class="stats-value">Mathilda Paatz</strong></li>
+              <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-muted);"><span class="stats-label" data-i18n="drv-stats-label-dob">Jahrgang</span><strong class="stats-value">2008</strong></li>
+              <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-muted);"><span class="stats-label" data-i18n="drv-stats-label-series">Aktuelle Serie</span><strong class="stats-value">F1 Academy / F4</strong></li>
+              <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-muted);"><span class="stats-label" data-i18n="drv-stats-label-team">Team</span><strong class="stats-value">Mathilda Racing</strong></li>
+              <li style="display: flex; justify-content: space-between; padding: 10px 0;"><span class="stats-label" data-i18n="drv-stats-label-success">Größter Erfolg</span><strong class="stats-value" style="text-align: right; max-width: 60%;">Erste deutsche Fahrerin in der F1 Academy</strong></li>
+            </ul>
+          </div>
+          
+          <div class="stats-card">
+            <h3 data-i18n="drv-voices-title">Stimmen & Feedback</h3>
+            <blockquote style="margin-top: 20px; border-left: 2px solid var(--accent); padding-left: 20px; font-style: italic; color: var(--text-secondary);">
+              <p data-i18n="drv-voices-text">"Das ganzheitliche Programm von Mathilda Racing hat mir den Übergang vom Kart ins Formelauto extrem erleichtert. Die physische und mentale Vorbereitung war der Schlüssel für meine ersten Punkte in der Meisterschaft."</p>
+              <cite style="display: block; margin-top: 15px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); font-style: normal;" data-i18n="drv-voices-author">— Mathilda Paatz, F1 Academy Nachwuchsfahrerin</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAROUSEL IMAGE GALLERY -->
+    <section class="gallery-section" style="border-bottom: 1px solid var(--border-color); padding: 80px 0;">
+      <div class="container">
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <img src="./downloaded_images/R6PF2911.jpeg" alt="F4 Testfahrten in Estoril">
+              <div class="carousel-caption">
+                <h4 data-i18n="drv-gallery-1-title">F4 Testfahrten in Estoril</h4>
+                <p data-i18n="drv-gallery-1-desc">Vorbereitung auf die Meisterschaft unter optimalen Bedingungen.</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <img src="./downloaded_images/R1PF0974.jpeg" alt="Start der Formula Winter Series in Barcelona">
+              <div class="carousel-caption">
+                <h4 data-i18n="drv-gallery-2-title">Formula Winter Series Barcelona</h4>
+                <p data-i18n="drv-gallery-2-desc">Hartes Racing im hochkarätigen internationalen Starterfeld.</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+              <img src="./downloaded_images/R1PF3705.jpeg" alt="Red Bull Ring Training">
+              <div class="carousel-caption">
+                <h4 data-i18n="drv-gallery-3-title">Red Bull Ring</h4>
+                <p data-i18n="drv-gallery-3-desc">Fahrtraining auf der anspruchsvollen GP-Strecke in Österreich.</p>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+              <img src="./downloaded_images/R5PF8292.jpeg" alt="Formel-4 Auto Action">
+              <div class="carousel-caption">
+                <h4 data-i18n="drv-gallery-4-title">Formel-4 Action</h4>
+                <p data-i18n="drv-gallery-4-desc">Präzision und Speed auf dem Weg in die Punkteränge.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn prev-btn" aria-label="Vorheriges Bild"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn next-btn" aria-label="Nächstes Bild"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FÜR ELTERN (Sicherheit & Schule) -->
+    <section class="parent-info-section" style="border-bottom: 1px solid var(--border-color); padding: 100px 0;">
+      <div class="container">
+        <div class="parent-info-content" style="max-width: 900px; margin: 0 auto;">
+          <span class="badge" data-i18n="drv-parent-badge">Verantwortung</span>
+          <h3 style="font-size: 2.2rem; margin-top: 10px; margin-bottom: 20px;" data-i18n="drv-parent-title">Für Eltern: Der sichere Einstieg</h3>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px;" data-i18n="drv-parent-desc">Die Sicherheit und die schulische beziehungsweise berufliche Ausbildung Ihres Kindes stehen für uns an oberster Stelle. Wir schaffen ein kontrolliertes und transparentes Umfeld für junge Athleten.</p>
+          
+          <div class="parent-info-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; border-top: 1px solid var(--border-color); padding-top: 40px;">
+            <div class="parent-item">
+              <h4 style="font-family: var(--font-mono); font-size: 1rem; color: var(--accent); margin-bottom: 15px;" data-i18n="drv-parent-1-title">Sicherheit an erster Stelle</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;" data-i18n="drv-parent-1-desc">Wir verwenden ausschließlich FIA-homologierte Formel-4-Fahrzeuge mit Halo-System und führen Tests nur auf offiziellen GP-Strecken mit vollem Medical-Support durch.</p>
+            </div>
+            <div class="parent-item">
+              <h4 style="font-family: var(--font-mono); font-size: 1rem; color: var(--accent); margin-bottom: 15px;" data-i18n="drv-parent-2-title">Schule & Motorsport</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;" data-i18n="drv-parent-2-desc">Keine Vernachlässigung der Ausbildung. Wir planen alle Lehrgänge und Tests vorausschauend in Abstimmung mit den Schulen, um Fehlzeiten gering zu halten.</p>
+            </div>
+            <div class="parent-item">
+              <h4 style="font-family: var(--font-mono); font-size: 1rem; color: var(--accent); margin-bottom: 15px;" data-i18n="drv-parent-3-title">Volle Kostentransparenz</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;" data-i18n="drv-parent-3-desc">Motorsport ist kostenintensiv. Bei uns erhalten Sie eine ehrliche und lückenlose Kostenaufstellung vor jedem Programmschritt – ohne versteckte Nebengebühren.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEHRSTUFIGES BEWERBUNGSFORMULAR -->
+    <section id="apply" class="apply-section" style="border-bottom: 1px solid var(--border-color); padding: 100px 0; background: rgba(255,255,255,0.01);">
+      <div class="container" style="max-width: 700px; margin: 0 auto;">
+        <span class="badge" data-i18n="drv-form-badge">Fahrer-Bewerbung</span>
+        <h2 class="section-title" style="text-align: center; margin-top: 10px;" data-i18n="drv-form-title">Starte dein Programm</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 50px;" data-i18n="drv-form-subtitle">Reiche dein Fahrerprofil ein. Das Ingenieurs- und Coachingteam von Mathilda Racing prüft jede Bewerbung persönlich.</p>
+        
+        <div id="driver-form-wrapper" class="form-card" style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 40px 30px;">
+          
+          <!-- PROGRESS INDICATOR -->
+          <div class="form-progress" style="position: relative; margin-bottom: 40px; background: var(--border-muted); height: 2px;">
+            <div class="progress-bar" id="driver-progress-bar" style="position: absolute; top: 0; left: 0; height: 100%; background: var(--accent); width: 20%; transition: width 0.3s ease-in-out;"></div>
+            <div class="progress-steps" style="display: flex; justify-content: space-between; position: absolute; top: -14px; left: 0; width: 100%;">
+              <span class="step-num active" data-step="1" style="width: 30px; height: 30px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">1</span>
+              <span class="step-num" data-step="2" style="width: 30px; height: 30px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">2</span>
+              <span class="step-num" data-step="3" style="width: 30px; height: 30px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">3</span>
+              <span class="step-num" data-step="4" id="step-num-minor" style="display: none; width: 30px; height: 30px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">4</span>
+              <span class="step-num" data-step="5" style="width: 30px; height: 30px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;">5</span>
+            </div>
+          </div>
+
+          <form id="form-driver-multistep" novalidate>
+            
+            <!-- SCHRITT 1: Persönliche Daten -->
+            <div class="form-step active" data-step="1">
+              <h3 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-mono); color: var(--accent);" data-i18n="drv-step-1-title">Schritt 1: Persönliche Daten</h3>
+              <div class="form-group">
+                <label for="driver-firstname" data-i18n="label-firstname">Vorname *</label>
+                <input type="text" id="driver-firstname" required placeholder="Vorname">
+              </div>
+              <div class="form-group">
+                <label for="driver-lastname" data-i18n="label-lastname">Nachname *</label>
+                <input type="text" id="driver-lastname" required placeholder="Nachname">
+              </div>
+              <div class="form-group">
+                <label for="driver-dob" data-i18n="label-dob">Geburtsdatum *</label>
+                <input type="date" id="driver-dob" required>
+              </div>
+              <div class="form-group">
+                <label for="driver-email" data-i18n="label-email">E-Mail-Adresse *</label>
+                <input type="email" id="driver-email" required placeholder="name@beispiel.de">
+              </div>
+              <div class="form-group">
+                <label for="driver-phone" data-i18n="label-phone">Telefonnummer *</label>
+                <input type="tel" id="driver-phone" required placeholder="+49 (0) 170 1234567">
+              </div>
+            </div>
+
+            <!-- SCHRITT 2: Motorsportprofil -->
+            <div class="form-step" data-step="2" style="display: none;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-mono); color: var(--accent);" data-i18n="drv-step-2-title">Schritt 2: Motorsportprofil</h3>
+              <div class="form-group">
+                <label for="driver-series" data-i18n="label-series">Aktuelle Rennserie / Klasse *</label>
+                <input type="text" id="driver-series" placeholder="z.B. OK-Junior Kart, Rotax Max, etc.">
+              </div>
+              <div class="form-group">
+                <label for="driver-experience" data-i18n="label-experience">Bisherige Erfahrung / Jahre *</label>
+                <textarea id="driver-experience" placeholder="Beschreibe kurz deine Rennsporterfahrung..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="driver-results" data-i18n="label-results">Wichtigste Ergebnisse & Erfolge *</label>
+                <textarea id="driver-results" placeholder="Deine besten Platzierungen..."></textarea>
+              </div>
+            </div>
+
+            <!-- SCHRITT 3: CV & Medien -->
+            <div class="form-step" data-step="3" style="display: none;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-mono); color: var(--accent);" data-i18n="drv-step-3-title">Schritt 3: Unterlagen & Medien</h3>
+              <div class="form-group">
+                <label data-i18n="label-upload">Motorsport-CV / Ergebnislisten (Optional)</label>
+                <div id="cv-upload-box" class="upload-area" style="border: 2px dashed var(--border-color); padding: 30px; text-align: center; cursor: pointer; background: rgba(255,255,255,0.01); transition: var(--transition);">
+                  <i class="fas fa-cloud-arrow-up" style="font-size: 2rem; color: var(--text-muted); margin-bottom: 10px;"></i>
+                  <p id="upload-box-text">Zieh dein Motorsport-CV hierhin oder <span class="text-accent" style="text-decoration: underline;">klicke zum Durchsuchen</span></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="driver-video" data-i18n="label-video">Link zu Onboard-Video (Optional)</label>
+                <input type="url" id="driver-video" placeholder="https://youtube.com/watch?... oder Drive Link">
+              </div>
+              <div class="form-group">
+                <label for="driver-social" data-i18n="label-social">Website / Social Media (Optional)</label>
+                <input type="url" id="driver-social" placeholder="https://instagram.com/deinname">
+              </div>
+            </div>
+
+            <!-- SCHRITT 4: Erziehungsberechtigte (Bedingt eingeblendet) -->
+            <div class="form-step" data-step="4" style="display: none;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 10px; font-family: var(--font-mono); color: var(--accent);" data-i18n="drv-step-4-title">Schritt 4: Einverständnis der Eltern</h3>
+              <div class="minor-alert" style="background: rgba(234, 91, 12, 0.05); border-left: 3px solid var(--accent); padding: 15px; margin-bottom: 20px; font-size: 0.85rem; color: var(--text-secondary);" data-i18n="drv-minor-alert">
+                <i class="fas fa-triangle-exclamation" style="margin-right: 5px;"></i> Da du unter 18 Jahre alt bist, benötigen wir für die Kontaktaufnahme das Einverständnis und die Kontaktdaten deiner Eltern beziehungsweise Erziehungsberechtigten.
+              </div>
+              <div class="form-group">
+                <label for="parent-name" data-i18n="label-parent-name">Name des Erziehungsberechtigten *</label>
+                <input type="text" id="parent-name" placeholder="Vor- und Nachname">
+              </div>
+              <div class="form-group">
+                <label for="parent-email" data-i18n="label-parent-email">E-Mail des Erziehungsberechtigten *</label>
+                <input type="email" id="parent-email" placeholder="eltern@beispiel.de">
+              </div>
+              <div class="form-group">
+                <label for="parent-phone" data-i18n="label-parent-phone">Telefonnummer des Erziehungsberechtigten *</label>
+                <input type="tel" id="parent-phone" placeholder="+49 (0) 170 9876543">
+              </div>
+              <div class="form-group checkbox-group" style="display: flex; gap: 10px; align-items: flex-start; margin-top: 15px;">
+                <input type="checkbox" id="parent-consent" style="margin-top: 4px;">
+                <label for="parent-consent" style="font-size: 0.85rem; color: var(--text-secondary);" data-i18n="label-parent-consent">Meine Erziehungsberechtigten sind mit dieser Bewerbung und der Kontaktaufnahme einverstanden. *</label>
+              </div>
+            </div>
+
+            <!-- SCHRITT 5: Programm & Ziele -->
+            <div class="form-step" data-step="5" style="display: none;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-mono); color: var(--accent);" data-i18n="drv-step-5-title">Schritt 5: Programm & Ziele</h3>
+              <div class="form-group">
+                <label for="driver-program-choice" data-i18n="label-program-choice">Gewünschtes Programm *</label>
+                <select id="driver-program-choice" style="width: 100%; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary); padding: 12px; font-family: inherit;">
+                  <option value="" data-i18n="opt-choose">Bitte wählen...</option>
+                  <option value="testday" data-i18n="opt-testday">Sichtungs- / Testtag</option>
+                  <option value="development" data-i18n="opt-dev">Ganzjähriges Entwicklungsprogramm</option>
+                  <option value="raceseason" data-i18n="opt-race">Rennwochenenden / Saisonprogramm</option>
+                  <option value="pathway" data-i18n="opt-pathway">F1 Academy Pathway</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="driver-goals" data-i18n="label-goals">Deine Ziele / Nachricht *</label>
+                <textarea id="driver-goals" placeholder="Beschreibe kurz deine sportlichen Ziele..."></textarea>
+              </div>
+              <div class="form-group checkbox-group" style="display: flex; gap: 10px; align-items: flex-start; margin-top: 15px;">
+                <input type="checkbox" id="driver-privacy" style="margin-top: 4px;">
+                <label for="driver-privacy" style="font-size: 0.85rem; color: var(--text-secondary);" data-i18n="label-privacy">Ich stimme zu, dass meine Angaben zur Bearbeitung der Bewerbung verarbeitet und gespeichert werden. Details siehe <a href="datenschutz.html" target="_blank" style="color: var(--accent); text-decoration: underline;">Datenschutzerklärung</a>. *</label>
+              </div>
+            </div>
+
+            <!-- BUTTONS NAVIGATION -->
+            <div class="form-step-nav" style="display: flex; justify-content: space-between; margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 20px;">
+              <button type="button" class="btn btn-secondary btn-prev" style="display: none;" data-i18n="btn-prev">Zurück</button>
+              <button type="button" class="btn btn-primary btn-next" style="margin-left: auto;" data-i18n="btn-next">Weiter</button>
+              <button type="submit" class="btn btn-primary btn-submit" style="display: none;" data-i18n="btn-submit">Fahrerprofil zur Prüfung einreichen</button>
+            </div>
+            
+            <!-- FEEDBACK BOX -->
+            <div id="driver-feedback" class="form-feedback" style="display: none; margin-top: 20px; padding: 20px; text-align: center;"></div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS (DRIVER & PARENTS) -->
+    <section id="faq" class="faq-section" style="padding: 100px 0;">
+      <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <span class="badge" data-i18n="faq-badge">FAQs</span>
+        <h2 class="section-title" style="text-align: center; margin-top: 10px;" data-i18n="faq-title">Häufig gestellte Fragen</h2>
+        
+        <div class="faq-search-wrapper" style="margin: 30px 0 50px; position: relative;">
+          <input type="text" id="faq-search-input" placeholder="FAQ durchsuchen..." style="width: 100%; padding: 15px 20px; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); font-family: inherit;">
+          <i class="fas fa-search" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question">Ab welchem Alter kann mein Kind einsteigen? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Ein Einstieg in den Formelsport ist ab ca. 14 Jahren möglich (entsprechend den FIA-Richtlinien für nationale F4-Lizenzen).</div>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">Ist Karterfahrung zwingend erforderlich? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Karterfahrung ist der ideale Grundstein, aber kein absolutes Ausschlusskriterium. Wir testen das Talent und die Lernkurve am Simulator und bei Sichtungstagen.</div>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">Wie läuft der Sichtungstag ab? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Der Tag umfasst ein technisches Briefing, Simulator-Fahrten zur Streckenkenntnis, sportmotorische Tests und mehrere Fahrten im echten Formel-4-Rennwagen unter Anleitung von Profi-Coaches.</div>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">Welche Kosten kommen auf uns zu? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Ein Sichtungs- / Testtag beginnt ab € 4.900. Die Kosten für eine komplette Saison hängen stark von der jeweiligen Meisterschaft ab. Wir legen alle Budgets vorab transparent offen.</div>
+            </div>
+          </div>
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">Wie wird die Sicherheit gewährleistet? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Wir arbeiten ausschließlich mit modernen Monopostos nach aktuellen FIA-Sicherheitsvorschriften (u.a. Halo-System). Alle Testtage werden auf permanenten GP-Rennstrecken mit professioneller Streckensicherung durchgeführt.</div>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question">Wie lässt sich der Motorsport mit der Schule vereinbaren? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Wir legen großen Wert auf die schulische Ausbildung. Die Test- und Renneinsätze werden langfristig geplant, um Fehlzeiten in Kooperation mit den Schulen zu minimieren.</div>
+            </div>
+          </div>
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question">Bietet Mathilda Racing eine Karrieregarantie? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Nein. Seriöse Talentförderung verspricht keinen Weg in die Formel 1. Wir garantieren jedoch eine ehrliche Einschätzung des Potenzials und eine hochprofessionelle Ausbildung.</div>
+            </div>
+          </div>
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button class="faq-question">Werden die Fahrdaten analysiert? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Ja, Telemetriedaten (Bremsdruck, Lenkwinkel, Gasstellung) werden nach jedem Turn mit den Daten erfahrener Referenzfahrer verglichen.</div>
+            </div>
+          </div>
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+            <button class="faq-question">Sind Übernachtung und Anreise im Preis enthalten? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Nein, Anreise und Unterkunft müssen selbst organisiert werden. Wir unterstützen jedoch mit Hotelempfehlungen an den Rennstrecken.</div>
+            </div>
+          </div>
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+            <button class="faq-question">Was passiert bei einem Unfall während des Testtags? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Für die Fahrzeuge bestehen branchenübliche Kasko-Versicherungen mit einer Selbstbeteiligung (Franchise). Die genauen Versicherungsbedingungen werden vor dem Testtag vertraglich vereinbart.</div>
+            </div>
+          </div>
+          <!-- FAQ 11 -->
+          <div class="faq-item">
+            <button class="faq-question">Können wir auch als internationale Fahrer teilnehmen? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Ja, unsere Betreuung und Schulung ist komplett zweisprachig (Deutsch / Englisch).</div>
+            </div>
+          </div>
+          <!-- FAQ 12 -->
+          <div class="faq-item">
+            <button class="faq-question">Wie hilft uns das Team bei der Sponsorensuche? <span class="faq-toggle-icon">+</span></button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Wir stellen professionelle Layout-Vorlagen und Leistungsdaten für Fahrer-Exposés zur Verfügung und beraten bei der Sponsoren-Akquise.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo-wrapper" style="margin-bottom: 20px;">
+          <img src="./downloaded_images/mathildaLogo-min-300x141-1.png" alt="Mathilda Racing Logo">
+        </div>
+        <p>Mathilda Racing begleitet ambitionierte Talente auf ihrem Weg in den professionellen Formelsport.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mathildaracing/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="fahrerprogramm.html">Fahrerprogramm</a></li>
+          <li><a href="partner.html">Partner werden</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Fahrerprogramm</h4>
+        <ul class="footer-links">
+          <li><a href="fahrerprogramm.html#program">Sichtungs- / Testtage</a></li>
+          <li><a href="fahrerprogramm.html#program">Fahrer-Coaching</a></li>
+          <li><a href="fahrerprogramm.html#apply">Fahrerprofil einreichen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt & Impressum</h4>
+        <p><i class="fas fa-envelope text-accent"></i> info@mathilda-racing.de</p>
+        <p><i class="fas fa-phone text-accent"></i> +49 (0) 221 123456</p>
+        <p><i class="fas fa-location-dot text-accent"></i> Köln, Deutschland</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Mathilda Racing. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal-links">
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script initialization -->
+  <script src="translations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

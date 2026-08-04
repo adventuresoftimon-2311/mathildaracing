@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung | Mathilda Racing</title>
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-wrapper">
+        <img src="./downloaded_images/mathildaLogo-min-300x141-1.png" alt="Mathilda Racing Logo" id="site-logo">
+      </a>
+      
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="fahrerprogramm.html">Fahrerprogramm</a></li>
+          <li><a href="partner.html">Partner werden</a></li>
+          <li><a href="fahrerprogramm.html#apply" class="btn-navigate">Bewerbung</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-contact">
+        <a href="tel:+49221123456" class="contact-btn"><i class="fas fa-phone"></i> <span>Anruf</span></a>
+        <a href="mailto:info@mathilda-racing.de" class="contact-btn"><i class="fas fa-envelope"></i> <span>Mail</span></a>
+      </div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <span class="lang-separator">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Navigation umschalten" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section active" style="padding-top: 140px; min-height: 80vh;">
+      <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <span class="badge">Rechtliches</span>
+        <h1 style="font-size: 2.8rem; margin-top: 10px; margin-bottom: 30px;" data-i18n="legal-datenschutz-title">Datenschutzerklärung</h1>
+        
+        <div class="legal-content" style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-1-title">1. Datenschutz auf einen Blick</h3>
+          <p>
+            Wir nehmen den Schutz Ihrer persönlichen Daten und der Daten Ihres Kindes sehr ernst. Personenbezogene Daten werden auf dieser Website vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO) behandelt.
+          </p>
+
+          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-2-title">2. Datenerfassung auf unserer Website</h3>
+          <p>
+            Die Datenerfassung erfolgt primär über unsere Online-Formulare (Fahrerbewerbung und Partneranfrage). Welche Daten erfasst werden, ist aus den jeweiligen Eingabefeldern der mehrstufigen Formulare ersichtlich.
+          </p>
+
+          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem; border-left: 3px solid var(--accent); padding-left: 10px;" data-i18n="legal-ds-minor-title">Spezieller Schutz für Minderjährige (Unter 18 Jahre)</h3>
+          <p style="color: var(--text-primary); font-weight: 600;">
+            Im Rahmen unseres Nachwuchs-Fahrerprogramms bewerben sich häufig minderjährige Fahrer (ab 14 Jahren). Uns ist der Schutz dieser Altersgruppe ein besonderes Anliegen:
+          </p>
+          <ul style="margin-left: 20px; margin-bottom: 15px;">
+            <li>Bewerbungen von Personen unter 18 Jahren setzen zwingend das Einverständnis und die Kontaktdaten eines Erziehungsberechtigten voraus.</li>
+            <li>Wir kontaktieren minderjährige Bewerber nur in Absprache mit den eingetragenen Erziehungsberechtigten.</li>
+            <li>Hochgeladene Dokumente (wie Sport-CVs oder Onboard-Aufnahmen) werden ausschließlich zum Zweck der Leistungseinschätzung durch unsere Coaches verwendet und nicht an Dritte weitergegeben.</li>
+          </ul>
+
+          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-3-title">3. Ihre Rechte (Auskunft, Löschung, Sperrung)</h3>
+          <p>
+            Sie und Ihre Erziehungsberechtigten haben jederzeit das Recht auf unentgeltliche Auskunft über die Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Wenden Sie sich hierzu an info@mathilda-racing.de.
+          </p>
+
+          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-4-title">4. Hosting & SSL-Verschlüsselung</h3>
+          <p>
+            Diese Website wird über Vercel Inc. gehostet. Zum Schutz der Übertragung vertraulicher Inhalte (z.B. Bewerbungen) nutzt diese Website eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an der Adresszeile des Browsers ("https://").
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo-wrapper" style="margin-bottom: 20px;">
+          <img src="./downloaded_images/mathildaLogo-min-300x141-1.png" alt="Mathilda Racing Logo">
+        </div>
+        <p>Mathilda Racing begleitet ambitionierte Talente auf ihrem Weg in den professionellen Formelsport.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mathildaracing/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="fahrerprogramm.html">Fahrerprogramm</a></li>
+          <li><a href="partner.html">Partner werden</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Fahrerprogramm</h4>
+        <ul class="footer-links">
+          <li><a href="fahrerprogramm.html#program">Sichtungs- / Testtage</a></li>
+          <li><a href="fahrerprogramm.html#program">Fahrer-Coaching</a></li>
+          <li><a href="fahrerprogramm.html#apply">Fahrerprofil einreichen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt & Impressum</h4>
+        <p><i class="fas fa-envelope text-accent"></i> info@mathilda-racing.de</p>
+        <p><i class="fas fa-phone text-accent"></i> +49 (0) 221 123456</p>
+        <p><i class="fas fa-location-dot text-accent"></i> Köln, Deutschland</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Mathilda Racing. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal-links">
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script initialization -->
+  <script src="translations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
