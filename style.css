@@ -395,6 +395,7 @@ main {
 .trust-item {
   padding: 40px;
   border-right: 1px solid var(--border-color);
+  text-align: center;
 }
 
 .trust-item:last-child {
@@ -408,6 +409,7 @@ main {
   color: var(--accent);
   line-height: 1;
   margin-bottom: 10px;
+  display: block;
 }
 
 .trust-text {
@@ -417,6 +419,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 700;
+  display: block;
 }
 
 /* Offering / Bento Grid (Strict Outlines) */
