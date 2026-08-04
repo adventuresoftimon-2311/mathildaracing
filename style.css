@@ -1536,7 +1536,8 @@ footer {
   }
 
   .marquee-track img {
-    height: 46px;
+    height: 48px;
+    max-width: 140px;
   }
 
   /* Pricing grid -> 2 columns */
@@ -1620,7 +1621,8 @@ footer {
   }
 
   .marquee-track img {
-    height: 42px;
+    height: 40px;
+    max-width: 110px;
   }
 
   /* Pricing grid -> 1 column */
@@ -1818,7 +1820,7 @@ footer {
 .sponsor-marquee-section {
   border-bottom: 1px solid var(--border-color);
   background: rgba(255, 255, 255, 0.01);
-  padding: 35px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -1864,7 +1866,8 @@ footer {
 }
 
 .marquee-track img {
-  height: 52px;
+  height: 60px;
+  max-width: 180px;
   width: auto;
   object-fit: contain;
   opacity: 0.85;
