@@ -711,6 +711,10 @@ main {
   margin-top: 60px;
 }
 
+.partner-pricing .pricing-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .price-card {
   background: var(--bg-card);
   padding: 40px 30px;
@@ -1527,7 +1531,8 @@ footer {
   }
 
   /* Pricing grid -> 2 columns */
-  .pricing-grid {
+  .pricing-grid,
+  .partner-pricing .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .price-card {
@@ -1606,7 +1611,8 @@ footer {
   }
 
   /* Pricing grid -> 1 column */
-  .pricing-grid {
+  .pricing-grid,
+  .partner-pricing .pricing-grid {
     grid-template-columns: 1fr;
   }
   .price-card {
