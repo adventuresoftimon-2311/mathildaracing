@@ -1540,7 +1540,24 @@ footer {
   .case-study-hero,
   .teaser-box,
   .partner-pitch {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+  .case-study-hero > div:nth-child(2) {
+    border-left: none !important;
+    border-top: 1px solid var(--border-color) !important;
+  }
+  .grid-3-col,
+  .grid-2-col {
+    grid-template-columns: 1fr !important;
+  }
+  .grid-3-col .card,
+  .grid-2-col .card {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-color) !important;
+  }
+  .grid-3-col .card:last-child,
+  .grid-2-col .card:last-child {
+    border-bottom: none !important;
   }
   .case-study-media img,
   .teaser-image,
@@ -2057,5 +2074,28 @@ footer {
   
   .series-card.inactive {
     opacity: 0.5; /* Keep slightly more visible on mobile for visual clues */
+  }
+
+  /* Compact mobile section paddings to avoid excessive scrolling and whitespace */
+  .page-section {
+    padding: 60px 0 !important;
+  }
+  .offering-section {
+    padding: 60px 0 !important;
+  }
+  .segmentation-section {
+    padding: 60px 0 !important;
+  }
+  .closing-section {
+    padding: 60px 0 !important;
+  }
+  #general-contact {
+    padding: 60px 0 !important;
+  }
+  #racing-series {
+    padding: 60px 0 !important;
+  }
+  .timeline-section {
+    padding: 60px 0 !important;
   }
 }
