@@ -1611,9 +1611,11 @@ footer {
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    align-items: center;
   }
   .hero-ctas .btn {
-    width: 100%;
+    width: fit-content;
+    text-align: center;
   }
 
   /* Trust grid -> 1 column */
