@@ -104,26 +104,38 @@ document.addEventListener("DOMContentLoaded", () => {
   seriesCards.forEach(card => {
     card.addEventListener("click", () => {
       const seriesId = card.getAttribute("data-series");
+      const isCurrentlyActive = card.classList.contains("active");
 
-      // Update active/inactive state of all tab cards
-      seriesCards.forEach(c => {
-        if (c === card) {
-          c.classList.add("active");
-          c.classList.remove("inactive");
-        } else {
+      if (isCurrentlyActive) {
+        // If clicking the active card, collapse it and reset opacity for all cards
+        seriesCards.forEach(c => {
           c.classList.remove("active");
-          c.classList.add("inactive");
+          c.classList.remove("inactive");
+        });
+        contentBlocks.forEach(block => {
+          block.classList.remove("active");
+        });
+      } else {
+        // If clicking an inactive card, activate it and dim the other cards
+        seriesCards.forEach(c => {
+          if (c === card) {
+            c.classList.add("active");
+            c.classList.remove("inactive");
+          } else {
+            c.classList.remove("active");
+            c.classList.add("inactive");
+          }
+        });
+
+        // Hide all details blocks and activate the clicked one
+        contentBlocks.forEach(block => {
+          block.classList.remove("active");
+        });
+
+        const targetBlock = document.getElementById(`content-${seriesId}`);
+        if (targetBlock) {
+          targetBlock.classList.add("active");
         }
-      });
-
-      // Update active state of all content blocks
-      contentBlocks.forEach(block => {
-        block.classList.remove("active");
-      });
-
-      const targetBlock = document.getElementById(`content-${seriesId}`);
-      if (targetBlock) {
-        targetBlock.classList.add("active");
       }
     });
   });
