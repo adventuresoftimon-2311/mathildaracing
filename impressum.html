@@ -8,8 +8,8 @@
   <!-- CSS Link -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- FontAwesome Icons via CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- FontAwesome Icons (Local) -->
+  <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
 </head>
 <body>
 
@@ -30,7 +30,7 @@
       </nav>
 
       <div class="header-contact">
-        <a href="tel:+49221123456" class="contact-btn"><i class="fas fa-phone"></i> <span>Anruf</span></a>
+        <a href="tel:+4922196256121" class="contact-btn"><i class="fas fa-phone"></i> <span>Anruf</span></a>
         <a href="mailto:info@mathilda-racing.de" class="contact-btn"><i class="fas fa-envelope"></i> <span>Mail</span></a>
       </div>
 
@@ -47,41 +47,66 @@
   </header>
 
   <main>
-    <section class="page-section active" style="padding-top: 140px; min-height: 80vh;">
+    <section class="page-section active" style="padding-top: 140px; padding-bottom: 80px; min-height: 80vh;">
       <div class="container" style="max-width: 800px; margin: 0 auto;">
         <span class="badge">Rechtliches</span>
-        <h1 style="font-size: 2.8rem; margin-top: 10px; margin-bottom: 30px;" data-i18n="legal-impressum-title">Impressum</h1>
+        <h1 style="font-size: 2.8rem; margin-top: 10px; margin-bottom: 30px;">Impressum</h1>
         
-        <div class="legal-content" style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-angaben">Angaben gemäß § 5 TMG</h3>
-          <p>
-            Mathilda Racing GmbH<br>
-            Rennstrecken-Allee 4<br>
-            50667 Köln<br>
-            Deutschland
-          </p>
+        <div class="legal-content" style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem; display: flex; flex-direction: column; gap: 25px;">
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-vertretung">Vertreten durch</h3>
-          <p>Geschäftsführer: Michael Paatz</p>
+          <div style="background: rgba(234, 91, 12, 0.05); border-left: 4px solid var(--accent); padding: 20px; font-size: 0.9rem;">
+            <p><strong>Hinweis vor Veröffentlichung:</strong> Bitte rechtlich bestätigen, ob tatsächlich die <em>profibu GmbH</em> oder <em>Michael Paatz</em> die datenschutzrechtlich verantwortliche Stelle ist. Vor der Live-Schaltung müssen zudem alle Platzhalter unter echten Unternehmensdaten eingetragen und verifiziert werden.</p>
+          </div>
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-kontakt">Kontakt</h3>
-          <p>
-            Telefon: +49 (0) 221 123456<br>
-            E-Mail: info@mathilda-racing.de
-          </p>
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 10px;">Angaben gemäß § 5 DDG</h2>
+            <p style="background: var(--bg-secondary); padding: 20px; border-left: 2px solid var(--border-color);">
+              Mathilda Racing<br>
+              profibu GmbH<br>
+              Brücker Mauspfad 461a<br>
+              51109 Köln<br>
+              Deutschland
+            </p>
+          </section>
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-register">Registereintrag</h3>
-          <p>
-            Eintragung im Handelsregister.<br>
-            Registergericht: Amtsgericht Köln<br>
-            Registernummer: HRB 12345
-          </p>
+          <section>
+            <h2 style="color: var(--text-primary); font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 10px;">Vertreten durch:</h2>
+            <p>[VERTRETUNGSBERECHTIGTE PERSON] (z. B. Geschäftsführer der profibu GmbH)</p>
+          </section>
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ust">Umsatzsteuer-ID</h3>
-          <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE 987654321</p>
+          <section>
+            <h2 style="color: var(--text-primary); font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 10px;">Kontakt:</h2>
+            <p>
+              Telefon: (0221) 96 25 61 – 21<br>
+              E-Mail: info@mathilda-racing.de
+            </p>
+          </section>
 
-          <h3 style="color: var(--text-primary); margin-top: 25px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-streit">Verbraucherstreitbeilegung</h3>
-          <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" style="color: var(--accent); text-decoration: underline;">https://ec.europa.eu/consumers/odr/</a>.<br>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+          <section>
+            <h2 style="color: var(--text-primary); font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 10px;">Handelsregister:</h2>
+            <p>[REGISTERGERICHT UND REGISTERNUMMER] (z. B. Amtsgericht Köln, HRB XXXXX)</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 10px;">Umsatzsteuer-Identifikationsnummer:</h2>
+            <p>[UMSATZSTEUER-ID, FALLS VORHANDEN] (gemäß § 27 a Umsatzsteuergesetz)</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); font-family: var(--font-mono); font-size: 1.2rem; margin-bottom: 10px;">Verantwortlich für journalistisch-redaktionelle Inhalte:</h2>
+            <p>[NAME UND ANSCHRIFT, FALLS ERFORDERLICH] (gemäß § 18 Abs. 2 MStV)</p>
+          </section>
+
+          <section style="border-top: 1px solid var(--border-muted); padding-top: 25px;">
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 10px;">EU-Streitschlichtung</h3>
+            <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">https://ec.europa.eu/consumers/odr/</a>.<br>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+          </section>
+
+          <section>
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 10px;">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h3>
+            <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+          </section>
+
         </div>
       </div>
     </section>
@@ -94,11 +119,11 @@
         <div class="logo-wrapper" style="margin-bottom: 20px;">
           <img src="./downloaded_images/mathildaLogo-min-300x141-1.png" alt="Mathilda Racing Logo">
         </div>
-        <p>Mathilda Racing begleitet ambitionierte Talente auf ihrem Weg in den professionellen Formelsport.</p>
+        <p>Mathilda Racing begleitet ambitionierte Talente auf ihrem weg in den professionellen Formelsport.</p>
         <div class="social-links">
-          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/mathildaracing/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.youtube.com/" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mathildaracing/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 
@@ -123,7 +148,7 @@
       <div class="footer-col">
         <h4>Kontakt & Impressum</h4>
         <p><i class="fas fa-envelope text-accent"></i> info@mathilda-racing.de</p>
-        <p><i class="fas fa-phone text-accent"></i> +49 (0) 221 123456</p>
+        <p><i class="fas fa-phone text-accent"></i> (0221) 96 25 61 – 21</p>
         <p><i class="fas fa-location-dot text-accent"></i> Köln, Deutschland</p>
       </div>
     </div>

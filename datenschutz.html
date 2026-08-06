@@ -8,8 +8,8 @@
   <!-- CSS Link -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- FontAwesome Icons via CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- FontAwesome Icons (Local) -->
+  <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
 </head>
 <body>
 
@@ -30,7 +30,7 @@
       </nav>
 
       <div class="header-contact">
-        <a href="tel:+49221123456" class="contact-btn"><i class="fas fa-phone"></i> <span>Anruf</span></a>
+        <a href="tel:+4922196256121" class="contact-btn"><i class="fas fa-phone"></i> <span>Anruf</span></a>
         <a href="mailto:info@mathilda-racing.de" class="contact-btn"><i class="fas fa-envelope"></i> <span>Mail</span></a>
       </div>
 
@@ -47,41 +47,198 @@
   </header>
 
   <main>
-    <section class="page-section active" style="padding-top: 140px; min-height: 80vh;">
+    <section class="page-section active" style="padding-top: 140px; padding-bottom: 80px; min-height: 80vh;">
       <div class="container" style="max-width: 800px; margin: 0 auto;">
         <span class="badge">Rechtliches</span>
-        <h1 style="font-size: 2.8rem; margin-top: 10px; margin-bottom: 30px;" data-i18n="legal-datenschutz-title">Datenschutzerklärung</h1>
+        <h1 style="font-size: 2.8rem; margin-top: 10px; margin-bottom: 30px;">Datenschutzerklärung</h1>
         
-        <div class="legal-content" style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-1-title">1. Datenschutz auf einen Blick</h3>
-          <p>
-            Wir nehmen den Schutz Ihrer persönlichen Daten und der Daten Ihres Kindes sehr ernst. Personenbezogene Daten werden auf dieser Website vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO) behandelt.
-          </p>
+        <div class="legal-content" style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem; display: flex; flex-direction: column; gap: 25px;">
+          
+          <div style="background: rgba(234, 91, 12, 0.05); border-left: 4px solid var(--accent); padding: 20px; font-size: 0.9rem;">
+            <p><strong>Hinweis vor Veröffentlichung:</strong> Bitte rechtlich prüfen und bestätigen, ob tatsächlich die <em>profibu GmbH</em> oder <em>Michael Paatz</em> als datenschutzrechtlich verantwortliche Stelle agiert. Die Angabe muss einheitlich mit dem Impressum übereinstimmen.</p>
+          </div>
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-2-title">2. Datenerfassung auf unserer Website</h3>
-          <p>
-            Die Datenerfassung erfolgt primär über unsere Online-Formulare (Fahrerbewerbung und Partneranfrage). Welche Daten erfasst werden, ist aus den jeweiligen Eingabefeldern der mehrstufigen Formulare ersichtlich.
-          </p>
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">1. Datenschutz auf einen Blick</h2>
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-top: 15px; margin-bottom: 5px;">Allgemeine Hinweise</h3>
+            <p>Die folgenden Hinweise geben einen Überblick darüber, was mit Ihren personenbezogenen Daten geschieht, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Informationen, mit denen Sie persönlich identifiziert werden können.</p>
+            
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-top: 15px; margin-bottom: 5px;">Verantwortliche Stelle</h3>
+            <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+            <p style="margin-top: 10px; background: var(--bg-secondary); padding: 15px; border-left: 2px solid var(--border-color);">
+              Mathilda Racing<br>
+              profibu GmbH<br>
+              Brücker Mauspfad 461a<br>
+              51109 Köln<br>
+              Deutschland<br><br>
+              Telefon: (0221) 96 25 61 – 21<br>
+              E-Mail: info@mathilda-racing.de
+            </p>
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem; border-left: 3px solid var(--accent); padding-left: 10px;" data-i18n="legal-ds-minor-title">Spezieller Schutz für Minderjährige (Unter 18 Jahre)</h3>
-          <p style="color: var(--text-primary); font-weight: 600;">
-            Im Rahmen unseres Nachwuchs-Fahrerprogramms bewerben sich häufig minderjährige Fahrer (ab 14 Jahren). Uns ist der Schutz dieser Altersgruppe ein besonderes Anliegen:
-          </p>
-          <ul style="margin-left: 20px; margin-bottom: 15px;">
-            <li>Bewerbungen von Personen unter 18 Jahren setzen zwingend das Einverständnis und die Kontaktdaten eines Erziehungsberechtigten voraus.</li>
-            <li>Wir kontaktieren minderjährige Bewerber nur in Absprache mit den eingetragenen Erziehungsberechtigten.</li>
-            <li>Hochgeladene Dokumente (wie Sport-CVs oder Onboard-Aufnahmen) werden ausschließlich zum Zweck der Leistungseinschätzung durch unsere Coaches verwendet und nicht an Dritte weitergegeben.</li>
-          </ul>
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-top: 15px; margin-bottom: 5px;">Wie erfassen wir Ihre Daten?</h3>
+            <p>Einige Daten werden erhoben, wenn Sie uns diese mitteilen. Dies betrifft insbesondere Angaben, die Sie in ein Kontaktformular (Fahrerbewerbung / Partneranfrage) eingeben oder uns per E-Mail, Telefon oder auf anderem Wege übermitteln.</p>
+            <p>Andere Daten werden beim Besuch der Website technisch verarbeitet. Hierzu können insbesondere die IP-Adresse, der verwendete Browser, das Betriebssystem, Datum und Uhrzeit des Seitenaufrufs sowie die aufgerufene Seite gehören.</p>
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-3-title">3. Ihre Rechte (Auskunft, Löschung, Sperrung)</h3>
-          <p>
-            Sie und Ihre Erziehungsberechtigten haben jederzeit das Recht auf unentgeltliche Auskunft über die Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Wenden Sie sich hierzu an info@mathilda-racing.de.
-          </p>
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-top: 15px; margin-bottom: 5px;">Wofür verwenden wir Ihre Daten?</h3>
+            <p>Wir verwenden personenbezogene Daten insbesondere:</p>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+              <li>zur technisch sicheren und fehlerfreien Bereitstellung der Website</li>
+              <li>zur Bearbeitung von Kontakt-, Bewerbungs- und Kooperationsanfragen</li>
+              <li>zur Durchführung vorvertraglicher Maßnahmen</li>
+              <li>zur Erfüllung gesetzlicher Verpflichtungen</li>
+              <li>zur Abwehr von Missbrauch und zur Gewährleistung der IT-Sicherheit</li>
+            </ul>
+            <p style="margin-top: 10px;">Eine Analyse des Nutzungsverhaltens zu Werbe- oder Marketingzwecken findet auf dieser Website nicht statt.</p>
+          </section>
 
-          <h3 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.1rem;" data-i18n="legal-ds-4-title">4. Hosting & SSL-Verschlüsselung</h3>
-          <p>
-            Diese Website wird über Vercel Inc. gehostet. Zum Schutz der Übertragung vertraulicher Inhalte (z.B. Bewerbungen) nutzt diese Website eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an der Adresszeile des Browsers ("https://").
-          </p>
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">2. Hosting</h2>
+            <p>Diese Website wird bei folgendem Anbieter gehostet:</p>
+            <p style="margin-top: 10px; background: var(--bg-secondary); padding: 15px; border-left: 2px solid var(--border-color);">
+              Vercel Inc.<br>
+              440 N Barranca Ave #4133<br>
+              Covina, CA 91723<br>
+              USA
+            </p>
+            <p style="margin-top: 10px;">Beim Aufruf der Website verarbeitet der Hostinganbieter technisch erforderliche Daten (Server-Logfiles). Hierzu gehören insbesondere:</p>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+              <li>IP-Adresse des zugreifenden Geräts</li>
+              <li>Datum und Uhrzeit des Zugriffs</li>
+              <li>Aufgerufene URL, Seite oder Datei</li>
+              <li>Übertragene Datenmenge</li>
+              <li>Referrer-URL (die zuvor besuchte Seite)</li>
+              <li>Browsertyp und Browserversion sowie das Betriebssystem des Nutzers</li>
+              <li>HTTP-Statuscode</li>
+            </ul>
+            <p style="margin-top: 10px;">Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren, stabilen und technisch einwandfreien Bereitstellung unseres Webauftritts.</p>
+            <p>Wir haben mit dem Hostinganbieter einen Vertrag zur Auftragsverarbeitung (Data Processing Addendum, DPA) gemäß Art. 28 DSGVO abgeschlossen, der durch EU-Standardvertragsklauseln ein angemessenes Datenschutzniveau gewährleistet.</p>
+            <p>Die Server-Logfiles werden von Vercel zur Erkennung und Abwehr von Bedrohungen sowie zur Fehleranalyse temporär gespeichert. Die Speicherdauer beträgt in der Regel maximal 14 Tage.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">3. Rechtsgrundlagen</h2>
+            <p>Wir verarbeiten personenbezogene Daten insbesondere auf folgenden Rechtsgrundlagen:</p>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+              <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong>, sofern Sie eine ausdrückliche Einwilligung erteilt haben (z. B. bei der Verarbeitung von Daten minderjähriger Fahrer mit Einverständnis der Eltern).</li>
+              <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong>, sofern die Verarbeitung zur Erfüllung eines Vertrags oder zur Durchführung vorvertraglicher Maßnahmen (z. B. Bewerbung für das Fahrerprogramm oder Kooperationsanbahnung) erforderlich ist.</li>
+              <li><strong>Art. 6 Abs. 1 lit. c DSGVO</strong>, sofern wir zur Verarbeitung gesetzlich verpflichtet sind.</li>
+              <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong>, sofern die Verarbeitung zur Wahrung unserer berechtigten Interessen (z. B. IT-Sicherheit, Beantwortung von Anfragen) erforderlich ist und keine schutzwürdigen Interessen von Ihnen überwiegen.</li>
+            </ul>
+            <p style="margin-top: 10px;">Sofern Informationen in Ihrem Endgerät gespeichert oder ausgelesen werden, richtet sich die Zulässigkeit zusätzlich nach § 25 TDDDG. Eine Einwilligung ist nicht erforderlich, da auf dieser Website ausschließlich technisch zwingend erforderliche Zugriffe stattfinden, um den von Ihnen explizit angeforderten Dienst bereitzustellen.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">4. Server-Logfiles</h2>
+            <p>Beim Besuch dieser Website erfasst der Webserver automatisch technische Verbindungsinformationen (siehe Abschnitt Hosting). Diese Daten werden nicht mit anderen Datenquellen zusammengeführt und nicht zur Erstellung persönlicher Nutzungsprofile verwendet.</p>
+            <p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO zur Gewährleistung der Stabilität, Sicherheit und Performance der Website.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">5. Kontaktaufnahme</h2>
+            
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-top: 15px; margin-bottom: 5px;">Kontaktformulare</h3>
+            <p>Wenn Sie uns über unsere mehrstufigen Bewerbungs- oder Anfrageformulare kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage und für mögliche Anschlussfragen.</p>
+            <p>Hierzu gehören je nach Formular insbesondere:</p>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+              <li>Name, E-Mail-Adresse, Telefonnummer</li>
+              <li>Motorsport-Lebenslauf, Erfahrung, Rennergebnisse</li>
+              <li>Social-Media-Profile und Video-Links</li>
+              <li>Firma, Branche, Marketingziele, Budgetrahmen</li>
+              <li>Inhalt der Nachricht und sportliche Ziele</li>
+              <li>Bei Minderjährigen: Name, E-Mail und Telefon des Erziehungsberechtigten</li>
+            </ul>
+            <p style="margin-top: 10px;">Die Verarbeitung der Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (sachgerechte Bearbeitung Ihrer Anfrage). Bei Bewerbungen minderjähriger Fahrer stützt sich die Kontaktaufnahme zudem auf die Einwilligung der Eltern gemäß Art. 6 Abs. 1 lit. a DSGVO.</p>
+            <p>Ihre Angaben werden gelöscht, sobald die Anfrage abschließend bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten (z. B. steuerliche oder handelsrechtliche Fristen bei einer zustande kommenden Partnerschaft) oder sonstigen berechtigten Gründe entgegenstehen.</p>
+            <p>Die technische Verarbeitung des Kontaktformulars erfolgt verschlüsselt (HTTPS POST) über eine eigene, auf Vercel-Infrastruktur ausgeführte Serverless-Funktion, die die Anfrage direkt an das offizielle Mathilda-Racing-Postfach (gehostet bei unserem E-Mail-Anbieter) weiterleitet. Eine dauerhafte Speicherung der Formularanfragen in einer öffentlich erreichbaren Online-Datenbank findet nicht statt.</p>
+
+            <h3 style="color: var(--text-primary); font-size: 1.05rem; margin-top: 15px; margin-bottom: 5px;">Kontaktaufnahme per E-Mail oder Telefon</h3>
+            <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir die von Ihnen übermittelten Angaben zur Bearbeitung Ihres Anliegens auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO bzw. Art. 6 Abs. 1 lit. f DSGVO.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">6. Cookies und ähnliche Technologien</h2>
+            <p>Diese Website verwendet grundsätzlich <strong>keine Cookies</strong> zu Analyse-, Werbe- oder Profilbildungszwecken. Es werden keine Tracker, Marketing-Pixel oder Fingerprinting-Techniken eingesetzt.</p>
+            <p>Wir verwenden im lokalen Speicher Ihres Browsers (LocalStorage) lediglich den Parameter <code>selectedLanguage</code>, um Ihre Sprachpräferenz (DE/EN) für Ihren nächsten Besuch zu speichern. Dies ist eine rein funktionale Einstellung, die keine personenbezogene Auswertung ermöglicht und technisch erforderlich ist, um die Seite in der von Ihnen gewählten Sprache anzuzeigen. Die Rechtsgrundlage hierfür ist § 25 Abs. 2 TDDDG.</p>
+            <p>Da keine einwilligungspflichtigen Cookies oder Dienste verwendet werden, wird auf dieser Website kein Cookie-Banner angezeigt.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">7. Schriftarten</h2>
+            <p>Die auf dieser Website verwendeten Schriftarten werden ausschließlich über lokale Systemschriftarten Ihres Betriebssystems dargestellt. Es wird beim Laden der Seite <strong>keine</strong> Verbindung zu externen Servern wie Google Fonts (fonts.googleapis.com / fonts.gstatic.com) hergestellt.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">8. Social-Media-Links</h2>
+            <p>Die Symbole sozialer Netzwerke (Instagram, Facebook, YouTube) im Footer unserer Website sind als einfache Hyperlinks eingebunden. Beim bloßen Laden unserer Seiten werden dadurch <strong>keine</strong> Daten an die Betreiber der Plattformen übertragen. Erst wenn Sie aktiv auf einen Link klicken und die Seite verlassen, gelten die Datenschutzbestimmungen der jeweiligen Netzbetreiber.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">9. Externe Links</h2>
+            <p>Unsere Website verlinkt auf Internetangebote Dritter. Auf die Datenverarbeitung durch diese externen Anbieter haben wir keinen Einfluss. Alle externen Verweise sind mit <code>rel="noopener noreferrer"</code> ausgestattet, um die Weitergabe von Header-Informationen zu minimieren.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">10. Keine automatisierte Entscheidungsfindung</h2>
+            <p>Eine ausschließlich automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO findet nicht statt.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">11. Speicherdauer</h2>
+            <p>Wir speichern Ihre personenbezogenen Daten nur so lange, wie es zur Erfüllung des jeweiligen Zwecks erforderlich ist, es sei denn, gesetzliche Aufbewahrungsfristen (z. B. 6 Jahre für Geschäftsbriefe nach § 257 HGB oder 10 Jahre für steuerlich relevante Unterlagen nach § 147 AO) verpflichten uns zu einer längeren Aufbewahrung. Nach Ablauf dieser Fristen werden die entsprechenden Daten routinemäßig gelöscht.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">12. Empfänger personenbezogener Daten</h2>
+            <p>Personenbezogene Daten werden innerhalb unseres Unternehmens nur an Personen weitergegeben, die unmittelbar mit der Bearbeitung Ihrer Anfrage oder Bewerbung betraut sind. Eine Übermittlung an Dritte erfolgt nicht, es sei denn, wir sind gesetzlich dazu verpflichtet oder Sie haben eingewilligt.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">13. Drittlandübermittlungen</h2>
+            <p>Eine Übermittlung personenbezogener Daten in Staaten außerhalb des Europäischen Wirtschaftsraums (EWR) findet im Rahmen des Hostings bei Vercel statt (Hauptsitz in den USA). Dies ist durch den Abschluss von Standardvertragsklauseln (SCC) rechtlich abgesichert.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">14. SSL- beziehungsweise TLS-Verschlüsselung</h2>
+            <p>Diese Website verwendet eine TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile Ihres Browsers mit „https://“ beginnt. Diese Verschlüsselung schützt Daten, die Sie an uns übermitteln, vor dem unbefugten Mitlesen durch Dritte.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">15. Ihre Rechte</h2>
+            <p>Sie haben nach Maßgabe der gesetzlichen Voraussetzungen folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+              <li>Recht auf Auskunft gemäß Art. 15 DSGVO</li>
+              <li>Recht auf Berichtigung gemäß Art. 16 DSGVO</li>
+              <li>Recht auf Löschung („Vergessenwerden“) gemäß Art. 17 DSGVO</li>
+              <li>Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO</li>
+              <li>Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO</li>
+              <li>Recht auf Widerspruch gegen die Verarbeitung gemäß Art. 21 DSGVO</li>
+              <li>Recht auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft</li>
+              <li>Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde gemäß Art. 77 DSGVO</li>
+            </ul>
+            <p style="margin-top: 10px;">Zur Ausübung Ihrer Rechte können Sie sich jederzeit per E-Mail an uns wenden: <a href="mailto:info@mathilda-racing.de" style="color: var(--accent); text-decoration: underline;">info@mathilda-racing.de</a></p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">16. Widerspruchsrecht</h2>
+            <p><strong>Sofern wir personenbezogene Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeiten, haben Sie das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.</strong></p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">17. Widerruf von Einwilligungen</h2>
+            <p>Eine erteilte Einwilligung (insb. Einverständnis der Erziehungsberechtigten für minderjährige Fahrer) können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">18. Beschwerderecht</h2>
+            <p>Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Zuständig ist in der Regel die Aufsichtsbehörde Ihres Wohnorts, Ihres Arbeitsplatzes oder des Sitzes unseres Unternehmens.</p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-primary); margin-top: 20px; font-family: var(--font-mono); font-size: 1.3rem; margin-bottom: 10px;">19. Aktualität und Änderungen</h2>
+            <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich die Website, die eingesetzten Techniken oder gesetzliche Bestimmungen ändern.</p>
+            <p style="margin-top: 10px;">Stand: August 2026</p>
+          </section>
+
         </div>
       </div>
     </section>
@@ -96,9 +253,9 @@
         </div>
         <p>Mathilda Racing begleitet ambitionierte Talente auf ihrem Weg in den professionellen Formelsport.</p>
         <div class="social-links">
-          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/mathildaracing/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.youtube.com/" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mathildaracing/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 
@@ -123,7 +280,7 @@
       <div class="footer-col">
         <h4>Kontakt & Impressum</h4>
         <p><i class="fas fa-envelope text-accent"></i> info@mathilda-racing.de</p>
-        <p><i class="fas fa-phone text-accent"></i> +49 (0) 221 123456</p>
+        <p><i class="fas fa-phone text-accent"></i> (0221) 96 25 61 – 21</p>
         <p><i class="fas fa-location-dot text-accent"></i> Köln, Deutschland</p>
       </div>
     </div>

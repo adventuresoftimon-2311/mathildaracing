@@ -421,13 +421,63 @@ document.addEventListener("DOMContentLoaded", () => {
       const lang = localStorage.getItem("selectedLanguage") || "de";
       const submitBtn = driverForm.querySelector('.btn-submit');
       const originalText = submitBtn.innerHTML;
+      
+      // Honeypot check on client
+      const honeypotVal = document.getElementById("driver-website") ? document.getElementById("driver-website").value : "";
+      if (honeypotVal && honeypotVal.trim() !== "") {
+        // Silently mock success to trick simple bots
+        submitBtn.innerHTML = feedbackMessages[lang].submitting;
+        submitBtn.disabled = true;
+        setTimeout(() => {
+          const feedback = document.getElementById("driver-feedback");
+          feedback.className = "form-feedback success";
+          feedback.innerHTML = `<h4>${feedbackMessages[lang].driverSuccessTitle}</h4><p>${feedbackMessages[lang].driverSuccessText}</p>`;
+          feedback.style.display = "block";
+          driverForm.reset();
+          feedback.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 1000);
+        return;
+      }
+
       submitBtn.innerHTML = feedbackMessages[lang].submitting;
       submitBtn.disabled = true;
-      
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
+
+      // Extract values securely
+      const payload = {
+        formType: 'driver',
+        website: honeypotVal,
+        driverFirstname: document.getElementById("driver-firstname")?.value || "",
+        driverLastname: document.getElementById("driver-lastname")?.value || "",
+        driverDob: document.getElementById("driver-dob")?.value || "",
+        driverEmail: document.getElementById("driver-email")?.value || "",
+        driverPhone: document.getElementById("driver-phone")?.value || "",
+        driverSeries: document.getElementById("driver-series")?.value || "",
+        driverExperience: document.getElementById("driver-experience")?.value || "",
+        driverResults: document.getElementById("driver-results")?.value || "",
+        driverVideo: document.getElementById("driver-video")?.value || "",
+        driverSocial: document.getElementById("driver-social")?.value || "",
+        parentName: document.getElementById("parent-name")?.value || "",
+        parentEmail: document.getElementById("parent-email")?.value || "",
+        parentPhone: document.getElementById("parent-phone")?.value || "",
+        parentConsent: document.getElementById("parent-consent")?.checked || false,
+        driverProgram: document.getElementById("driver-program-choice")?.value || "",
+        driverGoals: document.getElementById("driver-goals")?.value || ""
+      };
+
+      fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || "Submission failed");
+        }
         
+        // Success
         const feedback = document.getElementById("driver-feedback");
         feedback.className = "form-feedback success";
         feedback.innerHTML = `<h4>${feedbackMessages[lang].driverSuccessTitle}</h4><p>${feedbackMessages[lang].driverSuccessText}</p>`;
@@ -442,12 +492,21 @@ document.addEventListener("DOMContentLoaded", () => {
           uploadBox.style.background = "rgba(255, 255, 255, 0.01)";
         }
 
-        // Force reload page to clear all multistep classes & active triggers cleanly after submission
         feedback.scrollIntoView({ behavior: "smooth", block: "center" });
         setTimeout(() => {
           window.location.reload();
-        }, 3000);
-      }, 1500);
+        }, 4000);
+      })
+      .catch((err) => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        const feedback = document.getElementById("driver-feedback");
+        feedback.className = "form-feedback error";
+        feedback.innerHTML = `<h4>Fehler / Error</h4><p>${err.message}</p>`;
+        feedback.style.display = "block";
+        feedback.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
     });
   }
 
@@ -458,13 +517,57 @@ document.addEventListener("DOMContentLoaded", () => {
       const lang = localStorage.getItem("selectedLanguage") || "de";
       const submitBtn = sponsorForm.querySelector('.btn-submit');
       const originalText = submitBtn.innerHTML;
+
+      // Honeypot check on client
+      const honeypotVal = document.getElementById("sponsor-website-honeypot") ? document.getElementById("sponsor-website-honeypot").value : "";
+      if (honeypotVal && honeypotVal.trim() !== "") {
+        // Silently mock success to trick simple bots
+        submitBtn.innerHTML = feedbackMessages[lang].submitting;
+        submitBtn.disabled = true;
+        setTimeout(() => {
+          const feedback = document.getElementById("sponsor-feedback");
+          feedback.className = "form-feedback success";
+          feedback.innerHTML = `<h4>${feedbackMessages[lang].sponsorSuccessTitle}</h4><p>${feedbackMessages[lang].sponsorSuccessText}</p>`;
+          feedback.style.display = "block";
+          sponsorForm.reset();
+          feedback.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 1000);
+        return;
+      }
+
       submitBtn.innerHTML = feedbackMessages[lang].submitting;
       submitBtn.disabled = true;
-      
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
+
+      // Extract values securely
+      const payload = {
+        formType: 'sponsor',
+        website: honeypotVal,
+        sponsorCompany: document.getElementById("sponsor-company")?.value || "",
+        sponsorIndustry: document.getElementById("sponsor-industry")?.value || "",
+        sponsorWebsite: document.getElementById("sponsor-website")?.value || "",
+        sponsorGoal: document.getElementById("sponsor-goal")?.value || "",
+        sponsorBudget: document.getElementById("sponsor-budget")?.value || "",
+        sponsorName: document.getElementById("sponsor-name")?.value || "",
+        sponsorPosition: document.getElementById("sponsor-position")?.value || "",
+        sponsorEmail: document.getElementById("sponsor-email")?.value || "",
+        sponsorPhone: document.getElementById("sponsor-phone")?.value || "",
+        sponsorMessage: document.getElementById("sponsor-message")?.value || ""
+      };
+
+      fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || "Submission failed");
+        }
         
+        // Success
         const feedback = document.getElementById("sponsor-feedback");
         feedback.className = "form-feedback success";
         feedback.innerHTML = `<h4>${feedbackMessages[lang].sponsorSuccessTitle}</h4><p>${feedbackMessages[lang].sponsorSuccessText}</p>`;
@@ -475,8 +578,18 @@ document.addEventListener("DOMContentLoaded", () => {
         feedback.scrollIntoView({ behavior: "smooth", block: "center" });
         setTimeout(() => {
           window.location.reload();
-        }, 3000);
-      }, 1500);
+        }, 4000);
+      })
+      .catch((err) => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        const feedback = document.getElementById("sponsor-feedback");
+        feedback.className = "form-feedback error";
+        feedback.innerHTML = `<h4>Fehler / Error</h4><p>${err.message}</p>`;
+        feedback.style.display = "block";
+        feedback.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
     });
   }
 

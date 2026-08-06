@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700;800&family=Space+Mono:wght@400;700&display=swap');
-
 :root {
   --bg-primary: #ffffff;
   --bg-secondary: #fafafa;
@@ -17,9 +15,9 @@
   --text-secondary: #4a505c;
   --text-muted: #8a92a0;
   
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-body: 'Inter', sans-serif;
+  --font-display: Inter, Arial, Helvetica, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font-body: Inter, Arial, Helvetica, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   --max-width: 1300px;
@@ -213,7 +211,7 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 12px 24px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -1182,6 +1180,13 @@ textarea:focus {
 .form-feedback.success {
   background: rgba(234, 91, 12, 0.05);
   border-color: var(--accent);
+  color: var(--text-primary);
+  display: block;
+}
+
+.form-feedback.error {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: #dc2626;
   color: var(--text-primary);
   display: block;
 }

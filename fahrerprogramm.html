@@ -8,8 +8,8 @@
   <!-- CSS Link -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- FontAwesome Icons via CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- FontAwesome Icons (Local) -->
+  <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
 </head>
 <body>
 
@@ -581,6 +581,10 @@
           </div>
 
           <form id="form-driver-multistep" novalidate>
+            <!-- Honeypot field for bot detection (hidden from users) -->
+            <div style="display: none;">
+              <input type="text" name="website" id="driver-website" tabindex="-1" autocomplete="off">
+            </div>
             
             <!-- SCHRITT 1: Persönliche Daten -->
             <div class="form-step active" data-step="1">
@@ -685,10 +689,7 @@
                 <label for="driver-goals" data-i18n="label-goals">Deine Ziele / Nachricht *</label>
                 <textarea id="driver-goals" placeholder="Beschreibe kurz deine sportlichen Ziele..."></textarea>
               </div>
-              <div class="form-group checkbox-group" style="display: flex; gap: 10px; align-items: flex-start; margin-top: 15px;">
-                <input type="checkbox" id="driver-privacy" style="margin-top: 4px;">
-                <label for="driver-privacy" style="font-size: 0.85rem; color: var(--text-secondary);" data-i18n="label-privacy">Ich stimme zu, dass meine Angaben zur Bearbeitung der Bewerbung verarbeitet und gespeichert werden. Details siehe <a href="datenschutz.html" target="_blank" style="color: var(--accent); text-decoration: underline;">Datenschutzerklärung</a>. *</label>
-              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 15px;" data-i18n="legal-form-note">Wir verarbeiten Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Weitere Informationen finden Sie in unserer <a href="datenschutz.html" target="_blank" style="color: var(--accent); text-decoration: underline;">Datenschutzerklärung</a>.</p>
             </div>
 
             <!-- BUTTONS NAVIGATION -->
@@ -817,9 +818,9 @@
         </div>
         <p>Mathilda Racing begleitet ambitionierte Talente auf ihrem Weg in den professionellen Formelsport.</p>
         <div class="social-links">
-          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/mathildaracing/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.youtube.com/" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/mathilda.racing/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mathildaracing/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 
