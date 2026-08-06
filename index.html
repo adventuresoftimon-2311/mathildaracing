@@ -113,7 +113,7 @@
         <!-- Tab Selectors Grid -->
         <div class="series-selector-grid" style="margin-top: 50px;">
           <!-- Series 1 Card -->
-          <div class="series-card active" data-series="fws">
+          <div class="series-card" data-series="fws">
             <div class="series-card-logo-wrap">
               <img src="./downloaded_images/600px-Formula_Winter_Series_lightmode.png" alt="Formula Winter Series Logo">
             </div>
@@ -155,7 +155,7 @@
         <!-- Tab Content Blocks -->
         <div class="series-content-wrapper" style="margin-top: 50px;">
           <!-- CONTENT BLOCK 1: FWS -->
-          <div class="series-content-block active" id="content-fws">
+          <div class="series-content-block" id="content-fws">
             <div class="case-study-hero" style="grid-template-columns: 1.15fr 0.85fr;">
               <div class="case-study-text" style="padding: 40px;">
                 <span class="badge" style="background: rgba(234,91,12,0.1); color: var(--accent); border: none;">Formula Winter Series</span>
@@ -489,6 +489,47 @@
           <a href="fahrerprogramm.html" class="btn btn-primary" data-i18n="close-btn-drv">Fahrerprogramm starten</a>
           <a href="partner.html" class="btn btn-secondary" data-i18n="close-btn-sp">Partnerkonzept anfordern</a>
         </div>
+      </div>
+    </section>
+
+    <!-- GENERAL CONTACT FORM -->
+    <section id="general-contact" class="page-section" style="padding: 100px 0; border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
+      <div class="container" style="max-width: 600px; margin: 0 auto;">
+        <span class="badge" data-i18n="contact-badge">Kontakt</span>
+        <h2 class="section-title" style="text-align: center;" data-i18n="contact-title">Direkter Draht zu uns</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 40px;" data-i18n="contact-subtitle">Haben Sie Fragen zum Fahrerprogramm oder zu Partnerschaften? Schreiben Sie uns eine Nachricht.</p>
+        
+        <form id="form-general-contact" novalidate style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- Honeypot -->
+          <div style="display: none;">
+            <input type="text" name="website" id="contact-website" tabindex="-1" autocomplete="off">
+          </div>
+          
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="contact-name" style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;" data-i18n="label-contactname">Name *</label>
+            <input type="text" id="contact-name" required placeholder="Vor- und Nachname" style="width: 100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-primary); font-family: inherit; border-radius: 0;">
+          </div>
+          
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="contact-email" style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;" data-i18n="label-email">E-Mail-Adresse *</label>
+            <input type="email" id="contact-email" required placeholder="name@beispiel.de" style="width: 100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-primary); font-family: inherit; border-radius: 0;">
+          </div>
+          
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+            <label for="contact-message" style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;" data-i18n="label-message">Ihre Nachricht *</label>
+            <textarea id="contact-message" required placeholder="Wie können wir Ihnen helfen?" style="width: 100%; min-height: 150px; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-primary); font-family: inherit; resize: vertical; border-radius: 0;"></textarea>
+          </div>
+          
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-top: 5px;" data-i18n="legal-form-note">
+            Wir verarbeiten Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Weitere Informationen finden Sie in unserer <a href="datenschutz.html" target="_blank" style="color: var(--accent); text-decoration: underline;">Datenschutzerklärung</a>.
+          </p>
+          
+          <div style="display: flex; justify-content: center; margin-top: 15px;">
+            <button type="submit" class="btn btn-primary" data-i18n="btn-submit-general">Nachricht senden</button>
+          </div>
+          
+          <div id="general-contact-feedback" class="form-feedback" style="display: none; margin-top: 20px; padding: 20px; text-align: center;"></div>
+        </form>
       </div>
     </section>
 

@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
       driverSuccessText: "Dein Fahrerprofil wurde erfolgreich eingereicht. Unser Coaching- und Ingenieursteam prüft deine Daten persönlich. Wir melden uns innerhalb der nächsten 48 Stunden bei dir.",
       sponsorSuccessTitle: "Vielen Dank für Ihre Anfrage!",
       sponsorSuccessText: "Ihre Partneranfrage wurde erfolgreich übermittelt. Wir senden Ihnen das detaillierte Sponsoring-Exposé zu und setzen uns für ein erstes persönliches Kennenlernen kurzfristig mit Ihnen in Verbindung.",
+      contactSuccessTitle: "Vielen Dank für Ihre Nachricht!",
+      contactSuccessText: "Ihre Nachricht wurde erfolgreich übermittelt. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      contactValidationError: "Bitte füllen Sie alle erforderlichen Pflichtfelder (*) aus.",
+      contactEmailError: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
       submitting: "Wird übermittelt..."
     },
     en: {
@@ -17,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
       driverSuccessText: "Your driver profile was successfully submitted. Our coaching and engineering team will personally review your details. We will get in touch with you within the next 48 hours.",
       sponsorSuccessTitle: "Thank you for your inquiry!",
       sponsorSuccessText: "Your partnership inquiry was successfully submitted. We will send you the detailed sponsorship exposé and contact you shortly for a personal introduction.",
+      contactSuccessTitle: "Thank you for your message!",
+      contactSuccessText: "Your message was successfully submitted. We will get back to you as soon as possible.",
+      contactValidationError: "Please fill out all required fields (*).",
+      contactEmailError: "Please enter a valid email address.",
       submitting: "Submitting..."
     }
   };
@@ -656,6 +664,103 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const savedLang = localStorage.getItem("selectedLanguage") || "de";
   applyLanguage(savedLang);
+
+  // --- 7b. GENERAL CONTACT FORM SUBMISSION ---
+  const generalContactForm = document.getElementById("form-general-contact");
+  if (generalContactForm) {
+    generalContactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const lang = localStorage.getItem("selectedLanguage") || "de";
+      const submitBtn = generalContactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      const feedback = document.getElementById("general-contact-feedback");
+      
+      feedback.style.display = "none";
+      feedback.className = "form-feedback";
+      
+      const nameVal = document.getElementById("contact-name").value.trim();
+      const emailVal = document.getElementById("contact-email").value.trim();
+      const messageVal = document.getElementById("contact-message").value.trim();
+      
+      // Basic client-side validation
+      if (!nameVal || !emailVal || !messageVal) {
+        feedback.className = "form-feedback error";
+        feedback.innerHTML = `<p>${feedbackMessages[lang].contactValidationError}</p>`;
+        feedback.style.display = "block";
+        feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        return;
+      }
+      
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      if (!emailRegex.test(emailVal)) {
+        feedback.className = "form-feedback error";
+        feedback.innerHTML = `<p>${feedbackMessages[lang].contactEmailError}</p>`;
+        feedback.style.display = "block";
+        feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        return;
+      }
+      
+      // Honeypot check
+      const honeypotVal = document.getElementById("contact-website") ? document.getElementById("contact-website").value : "";
+      if (honeypotVal && honeypotVal.trim() !== "") {
+        submitBtn.innerHTML = feedbackMessages[lang].submitting;
+        submitBtn.disabled = true;
+        setTimeout(() => {
+          feedback.className = "form-feedback success";
+          feedback.innerHTML = `<h4>${feedbackMessages[lang].contactSuccessTitle}</h4><p>${feedbackMessages[lang].contactSuccessText}</p>`;
+          feedback.style.display = "block";
+          generalContactForm.reset();
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 1000);
+        return;
+      }
+      
+      submitBtn.innerHTML = feedbackMessages[lang].submitting;
+      submitBtn.disabled = true;
+      
+      // Extract values securely
+      const payload = {
+        formType: 'contact',
+        website: honeypotVal,
+        contactName: nameVal,
+        contactEmail: emailVal,
+        contactMessage: messageVal
+      };
+      
+      fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(data => { throw new Error(data.error || 'Server error'); });
+        }
+        return response.json();
+      })
+      .then(data => {
+        feedback.className = "form-feedback success";
+        feedback.innerHTML = `<h4>${feedbackMessages[lang].contactSuccessTitle}</h4><p>${feedbackMessages[lang].contactSuccessText}</p>`;
+        feedback.style.display = "block";
+        generalContactForm.reset();
+      })
+      .catch(err => {
+        feedback.className = "form-feedback error";
+        feedback.innerHTML = `<p>${err.message || 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.'}</p>`;
+        feedback.style.display = "block";
+      })
+      .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    });
+  }
 
   // --- HERO SLIDESHOW LOGIC ---
   const heroSlides = document.querySelectorAll(".hero-slide");

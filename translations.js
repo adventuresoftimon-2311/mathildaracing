@@ -399,7 +399,14 @@ const translations = {
     "[data-i18n='faq-badge']": "FAQs",
     "[data-i18n='faq-title']": "Häufig gestellte Fragen",
     "#faq-search-input": "FAQ durchsuchen...",
-    "[data-i18n='faq-search-input']": "FAQ durchsuchen..."
+    "[data-i18n='faq-search-input']": "FAQ durchsuchen...",
+    
+    // General Contact Form
+    "[data-i18n='contact-badge']": "Kontakt",
+    "[data-i18n='contact-title']": "Direkter Draht zu uns",
+    "[data-i18n='contact-subtitle']": "Haben Sie Fragen zum Fahrerprogramm oder zu Partnerschaften? Schreiben Sie uns eine Nachricht.",
+    "[data-i18n='label-message']": "Ihre Nachricht *",
+    "[data-i18n='btn-submit-general']": "Nachricht senden"
   },
   en: {
     // Navigation (common)
@@ -838,6 +845,13 @@ const translations = {
     "[data-i18n='faq-badge']": "FAQs",
     "[data-i18n='faq-title']": "Frequently Asked Questions",
     "#faq-search-input": "Search FAQs...",
-    "[data-i18n='faq-search-input']": "Search FAQs..."
+    "[data-i18n='faq-search-input']": "Search FAQs...",
+    
+    // General Contact Form
+    "[data-i18n='contact-badge']": "Contact",
+    "[data-i18n='contact-title']": "Get In Touch",
+    "[data-i18n='contact-subtitle']": "Do you have questions about our driver program or partnerships? Send us a message.",
+    "[data-i18n='label-message']": "Your Message *",
+    "[data-i18n='btn-submit-general']": "Send Message"
   }
 };

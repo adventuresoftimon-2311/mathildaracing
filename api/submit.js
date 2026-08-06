@@ -96,7 +96,12 @@ export default async function handler(req, res) {
       sponsorPosition,
       sponsorEmail,
       sponsorPhone,
-      sponsorMessage
+      sponsorMessage,
+
+      // Contact details
+      contactName,
+      contactEmail,
+      contactMessage
     } = req.body;
 
     // 1. Honeypot check (SPAM protection)
@@ -207,6 +212,46 @@ export default async function handler(req, res) {
         to: process.env.NOTIFICATION_RECEIVER || 'info@mathilda-racing.de',
         subject: `Neue Partnerschafts-Anfrage: ${company}`,
         text: `Partnerschafts-Anfrage eingegangen:\n\nFirma: ${company}\nBranche: ${industry}\nAnsprechpartner: ${name}\nPosition: ${sponsorPosition}\nE-Mail: ${email}\nTelefon: ${phone}\nMarketingziel: ${sponsorGoal}\nKooperationsrahmen: ${sponsorBudget}\nNachricht: ${message}`
+      });
+      */
+
+    } else if (formType === 'contact') {
+      // Mandatory checks
+      const name = sanitizeInput(contactName);
+      const email = sanitizeInput(contactEmail);
+      const message = sanitizeInput(contactMessage);
+
+      if (!name || !email || !message) {
+        return res.status(400).json({ error: 'Bitte füllen Sie alle erforderlichen Pflichtfelder aus.' });
+      }
+
+      if (!isValidEmail(email)) {
+        return res.status(400).json({ error: 'Ungültige E-Mail-Adresse.' });
+      }
+
+      if (name.length > 100 || email.length > 100 || message.length > 3000) {
+        return res.status(400).json({ error: 'Eingabelänge überschreitet das Limit.' });
+      }
+
+      // 3. Process General Contact Request (SMTP Mailer Placeholder)
+      console.log(`Processing general contact message from ${name} (${email})`);
+      
+      /*
+      const nodemailer = require('nodemailer');
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST,
+        port: parseInt(process.env.SMTP_PORT || '587'),
+        secure: process.env.SMTP_SECURE === 'true',
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASSWORD
+        }
+      });
+      await transporter.sendMail({
+        from: `Mathilda Website <${process.env.SMTP_FROM}>`,
+        to: process.env.NOTIFICATION_RECEIVER || 'info@mathilda-racing.de',
+        subject: `Allgemeine Kontaktanfrage: ${name}`,
+        text: `Allgemeine Kontaktanfrage eingegangen:\n\nName: ${name}\nE-Mail: ${email}\nNachricht:\n${message}`
       });
       */
 
