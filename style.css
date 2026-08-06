@@ -1298,6 +1298,16 @@ footer {
   color: var(--border-muted);
 }
 
+.footer-col p a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-col p a:hover {
+  color: var(--accent);
+}
+
 .footer-links {
   list-style: none;
 }
