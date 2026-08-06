@@ -97,6 +97,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // --- 4c. COMPARATIVE RACING SERIES TAB SWITCHER ---
+  const seriesCards = document.querySelectorAll(".series-card");
+  const contentBlocks = document.querySelectorAll(".series-content-block");
+
+  seriesCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const seriesId = card.getAttribute("data-series");
+
+      // Update active/inactive state of all tab cards
+      seriesCards.forEach(c => {
+        if (c === card) {
+          c.classList.add("active");
+          c.classList.remove("inactive");
+        } else {
+          c.classList.remove("active");
+          c.classList.add("inactive");
+        }
+      });
+
+      // Update active state of all content blocks
+      contentBlocks.forEach(block => {
+        block.classList.remove("active");
+      });
+
+      const targetBlock = document.getElementById(`content-${seriesId}`);
+      if (targetBlock) {
+        targetBlock.classList.add("active");
+      }
+    });
+  });
+
   faqItems.forEach(item => {
     const question = item.querySelector(".faq-question");
     question.addEventListener("click", () => {
